@@ -1,21 +1,38 @@
 {
-  "name": "gloss-design-system",
-  "version": "3.0.0-alpha.0",
-  "private": true,
-  "description": "University of Utah Health design system for clinical and academic digital experiences",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/utahhealthcare/gloss-design-system.git"
-  },
-  "bugs": {
-    "url": "https://github.com/utahhealthcare/gloss-design-system/issues"
-  },
-  "homepage": "https://github.com/utahhealthcare/gloss-design-system#readme",
-  "keywords": [
-    "design-system",
-    "uikit",
-    "university-of-utah-health"
-  ],
-  "author": "University of Utah Health",
-  "license": "BSD-3-Clause"
+    "name": "gloss-design-system",
+    "version": "3.0.0-alpha.0",
+    "private": true,
+    "scripts": {
+        "format": "prettier --check .",
+        "format:write": "prettier --write .",
+        "lint": "npm run lint:js && npm run lint:css",
+        "lint:js": "eslint . --no-error-on-unmatched-pattern",
+        "lint:css": "stylelint \"src/**/*.css\" --allow-empty-input"
+    },
+    "description": "University of Utah Health design system for clinical and academic digital experiences",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/utahhealthcare/gloss-design-system.git"
+    },
+    "bugs": {
+        "url": "https://github.com/utahhealthcare/gloss-design-system/issues"
+    },
+    "homepage": "https://github.com/utahhealthcare/gloss-design-system#readme",
+    "keywords": [
+        "design-system",
+        "uikit",
+        "university-of-utah-health"
+    ],
+    "author": "University of Utah Health",
+    "license": "BSD-3-Clause",
+    "devDependencies": {
+        "@eslint/js": "^10.0.1",
+        "eslint": "^10.11.0",
+        "eslint-config-prettier": "^10.1.8",
+        "globals": "^17.12.0",
+        "prettier": "^3.9.8",
+        "prettier-plugin-organize-imports": "^4.3.0",
+        "stylelint": "^16.26.1",
+        "stylelint-config-standard": "^39.0.1"
+    }
 }

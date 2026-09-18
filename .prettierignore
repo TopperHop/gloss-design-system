@@ -1,0 +1,8 @@
+node_modules/
+package-lock.json
+dist/
+_site/
+.jekyll-cache/
+coverage/
+playwright-report/
+test-results/
