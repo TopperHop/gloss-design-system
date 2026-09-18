@@ -1,14 +1,17 @@
 {
     "name": "gloss-design-system",
     "version": "3.0.0-alpha.0",
-  "private": true,
-  "scripts": {
-    "build:css": "sass --load-path=node_modules --quiet-deps src/theme/gloss.scss dist/css/gloss.css",
-    "format": "prettier --check .",
+    "private": true,
+    "engines": {
+        "node": ">=24.0.0"
+    },
+    "scripts": {
+        "build:css": "sass --load-path=node_modules --quiet-deps src/theme/gloss.scss dist/css/gloss.css",
+        "format": "prettier --check .",
         "format:write": "prettier --write .",
         "lint": "npm run lint:js && npm run lint:css",
         "lint:js": "eslint . --no-error-on-unmatched-pattern",
-        "lint:css": "stylelint \"src/**/*.css\" --allow-empty-input"
+        "lint:css": "stylelint \"src/**/*.{css,scss}\" --allow-empty-input"
     },
     "description": "University of Utah Health design system for clinical and academic digital experiences",
     "repository": {
@@ -35,7 +38,8 @@
         "prettier-plugin-organize-imports": "^4.3.0",
         "sass": "^1.104.1",
         "stylelint": "^16.26.1",
-        "stylelint-config-standard": "^39.0.1"
+        "stylelint-config-standard": "^39.0.1",
+        "stylelint-config-standard-scss": "^16.0.0"
     },
     "dependencies": {
         "uikit": "^3.25.23"
