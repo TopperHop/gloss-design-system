@@ -1,12 +1,21 @@
 {
   "name": "gloss-design-system",
   "version": "3.0.0-alpha.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "private": true,
+  "description": "University of Utah Health design system for clinical and academic digital experiences",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/utahhealthcare/gloss-design-system.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "BSD-3-Clause",
-  "description": ""
+  "bugs": {
+    "url": "https://github.com/utahhealthcare/gloss-design-system/issues"
+  },
+  "homepage": "https://github.com/utahhealthcare/gloss-design-system#readme",
+  "keywords": [
+    "design-system",
+    "uikit",
+    "university-of-utah-health"
+  ],
+  "author": "University of Utah Health",
+  "license": "BSD-3-Clause"
 }
