@@ -69,4 +69,6 @@ Contribution guidance, coding standards, testing commands, release procedures, a
 
 ## License and assets
 
-The licensing model for the open-source code is still being finalized. Fonts, University marks, icons, photography, and other restricted assets may be distributed separately and must not be added to this repository until their licensing and redistribution terms are confirmed.
+Gloss's original source code is released under the BSD-3-Clause license. See [LICENSE](LICENSE) for the full text.
+
+Fonts, University marks, icons, photography, and other restricted assets may be distributed separately and must not be added to this repository unless their licensing and redistribution terms have been confirmed. The Gloss code license does not grant permission to use University trademarks or branding.
