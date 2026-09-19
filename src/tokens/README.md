@@ -33,6 +33,32 @@ resolve the shared tokens once for the default theme and again for each
 sub-brand theme, producing a base `:root` declaration plus narrowly scoped
 theme overrides.
 
+## Files and commands
+
+Production token files will live in these directories:
+
+```text
+src/tokens/source/
+  base/                 Raw shared values
+  default/              Default U of U Health role tokens
+  themes/
+    huntsman/           Huntsman role overrides
+    hmhi/               HMHI role overrides
+    safeut/             SafeUT role overrides
+```
+
+Directories without token files are valid while v3 is being designed. The
+dependency-free generator reads those files, writes
+`src/styles/_tokens.scss`, and supports two commands:
+
+```sh
+npm run build:tokens    # Regenerate the Sass token layer
+npm run check:tokens    # Fail if that generated file is stale
+```
+
+The generator currently accepts color tokens only. It requires a theme to
+override an existing default token; themes cannot create one-off token names.
+
 ## Boundaries
 
 - JSON is the portable source format. It should remain understandable without

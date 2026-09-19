@@ -6,12 +6,15 @@
         "node": ">=24.0.0"
     },
     "scripts": {
+        "build:tokens": "node scripts/build-tokens.mjs",
         "build:css": "sass --load-path=node_modules --quiet-deps src/styles/gloss.scss dist/css/gloss.css",
+        "check:tokens": "node scripts/build-tokens.mjs --check",
         "format": "prettier --check .",
         "format:write": "prettier --write .",
         "lint": "npm run lint:js && npm run lint:css",
         "lint:js": "eslint . --no-error-on-unmatched-pattern",
-        "lint:css": "stylelint \"src/**/*.{css,scss}\" --allow-empty-input"
+        "lint:css": "stylelint \"src/**/*.{css,scss}\" --allow-empty-input",
+        "test:tokens": "node --test tests/tokens/build-tokens.test.mjs"
     },
     "description": "University of Utah Health design system for clinical and academic digital experiences",
     "repository": {

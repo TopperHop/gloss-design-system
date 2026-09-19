@@ -1,0 +1,227 @@
+import { readdir, readFile, writeFile } from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const projectDirectory = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const sourceDirectory =
+    process.env.GLOSS_TOKEN_SOURCE_DIRECTORY ??
+    path.join(projectDirectory, 'src', 'tokens', 'source');
+const outputPath =
+    process.env.GLOSS_TOKEN_OUTPUT_PATH ??
+    path.join(projectDirectory, 'src', 'styles', '_tokens.scss');
+const shouldCheck = process.argv.includes('--check');
+
+const isObject = (value) => value !== null && typeof value === 'object' && !Array.isArray(value);
+
+async function filesIn(directory) {
+    try {
+        const entries = await readdir(directory, { withFileTypes: true });
+        const files = await Promise.all(
+            entries
+                .sort((first, second) => first.name.localeCompare(second.name))
+                .map((entry) => {
+                    const entryPath = path.join(directory, entry.name);
+
+                    if (entry.isDirectory()) {
+                        return filesIn(entryPath);
+                    }
+
+                    return entry.isFile() && entry.name.endsWith('.json') ? [entryPath] : [];
+                }),
+        );
+
+        return files.flat();
+    } catch (error) {
+        if (error.code === 'ENOENT') {
+            return [];
+        }
+
+        throw error;
+    }
+}
+
+async function loadDirectory(directory) {
+    const files = await filesIn(directory);
+    let tokens = {};
+
+    for (const file of files) {
+        let parsed;
+
+        try {
+            parsed = JSON.parse(await readFile(file, 'utf8'));
+        } catch (error) {
+            throw new Error(
+                `Could not parse ${path.relative(projectDirectory, file)}: ${error.message}`,
+                { cause: error },
+            );
+        }
+
+        if (!isObject(parsed)) {
+            throw new Error(`${path.relative(projectDirectory, file)} must contain a JSON object.`);
+        }
+
+        tokens = merge(tokens, parsed);
+    }
+
+    return tokens;
+}
+
+function merge(base, override) {
+    const result = { ...base };
+
+    for (const [key, value] of Object.entries(override)) {
+        result[key] = isObject(base[key]) && isObject(value) ? merge(base[key], value) : value;
+    }
+
+    return result;
+}
+
+function flattenTokens(group, name = [], inheritedType) {
+    const type = group.$type ?? inheritedType;
+
+    if ('$value' in group) {
+        if (type !== 'color') {
+            throw new Error(`Token ${name.join('.')} must have a $type of color.`);
+        }
+
+        return new Map([[name.join('.'), group]]);
+    }
+
+    const tokens = new Map();
+
+    for (const [key, value] of Object.entries(group)) {
+        if (key.startsWith('$')) {
+            continue;
+        }
+
+        if (!/^[a-z][a-z0-9-]*$/.test(key)) {
+            throw new Error(
+                `Token group name "${key}" must use lowercase letters, numbers, and hyphens.`,
+            );
+        }
+
+        if (!isObject(value)) {
+            throw new Error(`Token group ${[...name, key].join('.')} must be an object.`);
+        }
+
+        for (const [tokenName, token] of flattenTokens(value, [...name, key], type)) {
+            tokens.set(tokenName, token);
+        }
+    }
+
+    return tokens;
+}
+
+function cssName(tokenName) {
+    return `--gls-${tokenName.replaceAll('.', '-')}`;
+}
+
+function cssValue(token, availableTokens) {
+    if (typeof token.$value === 'string') {
+        const reference = token.$value.match(/^\{([^}]+)\}$/);
+
+        if (!reference || !availableTokens.has(reference[1])) {
+            throw new Error(`Token reference "${token.$value}" does not resolve.`);
+        }
+
+        return `var(${cssName(reference[1])})`;
+    }
+
+    const value = token.$value;
+
+    if (!isObject(value) || value.colorSpace !== 'srgb' || !Array.isArray(value.components)) {
+        throw new Error('Color values must be sRGB color objects or token references.');
+    }
+
+    if (value.hex) {
+        if (!/^#[0-9a-f]{6}$/i.test(value.hex)) {
+            throw new Error(`Color hex fallback "${value.hex}" must use six hexadecimal digits.`);
+        }
+
+        return value.hex;
+    }
+
+    if (
+        value.components.length !== 3 ||
+        value.components.some((component) => typeof component !== 'number')
+    ) {
+        throw new Error('An sRGB color must have three numeric components.');
+    }
+
+    const alpha = value.alpha === undefined ? '' : ` / ${value.alpha}`;
+    return `color(srgb ${value.components.join(' ')}${alpha})`;
+}
+
+function renderDeclarations(tokens, availableTokens = tokens) {
+    return [...tokens]
+        .sort(([first], [second]) => first.localeCompare(second))
+        .map(([name, token]) => `    ${cssName(name)}: ${cssValue(token, availableTokens)};`)
+        .join('\n');
+}
+
+function renderStylesheet(defaultTokens, themes) {
+    const sections = [
+        [
+            '/*',
+            ' * Generated by scripts/build-tokens.mjs.',
+            ' * Source: src/tokens/source/',
+            ' * Do not edit by hand.',
+            ' */',
+        ].join('\n'),
+    ];
+    const rootDeclarations = renderDeclarations(defaultTokens);
+
+    if (rootDeclarations) {
+        sections.push(`:root {\n${rootDeclarations}\n}`);
+    }
+
+    for (const [themeName, tokens] of themes) {
+        const overrides = new Map();
+
+        for (const [name, token] of tokens) {
+            if (!defaultTokens.has(name)) {
+                throw new Error(
+                    `Theme "${themeName}" defines ${name}, which is absent from the default theme.`,
+                );
+            }
+
+            if (cssValue(token, tokens) !== cssValue(defaultTokens.get(name), defaultTokens)) {
+                overrides.set(name, token);
+            }
+        }
+
+        if (overrides.size > 0) {
+            sections.push(`.gls-theme-${themeName} {\n${renderDeclarations(overrides, tokens)}\n}`);
+        }
+    }
+
+    return `${sections.join('\n\n')}\n`;
+}
+
+const baseTokens = await loadDirectory(path.join(sourceDirectory, 'base'));
+const defaultTokens = flattenTokens(
+    merge(baseTokens, await loadDirectory(path.join(sourceDirectory, 'default'))),
+);
+const themeDirectory = path.join(sourceDirectory, 'themes');
+const themeEntries = await filesIn(themeDirectory);
+const themeNames = [
+    ...new Set(themeEntries.map((file) => path.relative(themeDirectory, file).split(path.sep)[0])),
+];
+const themes = new Map();
+
+for (const themeName of themeNames) {
+    const themeOverrides = await loadDirectory(path.join(themeDirectory, themeName));
+    const defaultTheme = await loadDirectory(path.join(sourceDirectory, 'default'));
+    themes.set(themeName, flattenTokens(merge(merge(baseTokens, defaultTheme), themeOverrides)));
+}
+
+const stylesheet = renderStylesheet(defaultTokens, themes);
+const currentStylesheet = await readFile(outputPath, 'utf8');
+
+if (shouldCheck) {
+    if (currentStylesheet !== stylesheet) {
+        throw new Error('src/styles/_tokens.scss is stale. Run npm run build:tokens.');
+    }
+} else if (currentStylesheet !== stylesheet) {
+    await writeFile(outputPath, stylesheet);
+}
