@@ -56,6 +56,9 @@ npm run build:tokens    # Regenerate the Sass token layer
 npm run check:tokens    # Fail if that generated file is stale
 ```
 
+`npm run build:css` runs the freshness check automatically. After changing a
+token file, run `npm run build:tokens` before compiling CSS.
+
 The generator currently accepts color tokens only. It requires a theme to
 override an existing default token; themes cannot create one-off token names.
 

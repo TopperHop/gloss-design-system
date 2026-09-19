@@ -133,19 +133,28 @@ function cssValue(token, availableTokens) {
         throw new Error('Color values must be sRGB color objects or token references.');
     }
 
+    if (
+        value.components.length !== 3 ||
+        value.components.some(
+            (component) => typeof component !== 'number' || component < 0 || component > 1,
+        )
+    ) {
+        throw new Error('An sRGB color must have three numeric components between 0 and 1.');
+    }
+
+    if (
+        value.alpha !== undefined &&
+        (typeof value.alpha !== 'number' || value.alpha < 0 || value.alpha > 1)
+    ) {
+        throw new Error('Color alpha must be a number between 0 and 1.');
+    }
+
     if (value.hex) {
         if (!/^#[0-9a-f]{6}$/i.test(value.hex)) {
             throw new Error(`Color hex fallback "${value.hex}" must use six hexadecimal digits.`);
         }
 
         return value.hex;
-    }
-
-    if (
-        value.components.length !== 3 ||
-        value.components.some((component) => typeof component !== 'number')
-    ) {
-        throw new Error('An sRGB color must have three numeric components.');
     }
 
     const alpha = value.alpha === undefined ? '' : ` / ${value.alpha}`;

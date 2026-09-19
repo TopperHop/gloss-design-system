@@ -32,14 +32,14 @@ The structure will be introduced incrementally as the project develops. The plan
 
 ```text
 src/tokens/       Canonical design tokens
-src/theme/        UIkit overrides and Gloss styling
+src/styles/       UIkit overrides, generated token CSS, and Gloss styling
 src/js/           Gloss JavaScript and component behavior
 docs/             Jekyll documentation and examples
 tests/            Unit, accessibility, interaction, and visual tests
 assets-private/   Locally supplied licensed assets; not open-source code
 ```
 
-Generated files will be kept separate from authored source files and will not be edited by hand.
+Generated files are clearly identified, must not be edited by hand, and are verified by automated checks.
 
 ## Development principles
 

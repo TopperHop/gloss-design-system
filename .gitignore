@@ -18,6 +18,9 @@ test-results/
 .env.*
 !.env.example
 
+# Licensed assets supplied outside the open-source repository
+assets-private/
+
 # npm, Yarn, and pnpm logs
 npm-debug.log*
 yarn-debug.log*
