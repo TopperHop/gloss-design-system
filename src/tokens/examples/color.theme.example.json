@@ -1,0 +1,37 @@
+{
+    "$description": "Illustrative only. This file is not part of the Gloss build.",
+    "color": {
+        "$type": "color",
+        "reference": {
+            "ink": {
+                "$description": "A raw color value. Components should not use it directly.",
+                "$value": {
+                    "colorSpace": "srgb",
+                    "components": [0, 0, 0],
+                    "hex": "#000000"
+                }
+            },
+            "paper": {
+                "$value": {
+                    "colorSpace": "srgb",
+                    "components": [1, 1, 1],
+                    "hex": "#ffffff"
+                }
+            }
+        },
+        "role": {
+            "text": {
+                "default": {
+                    "$description": "The usual text color on a light surface.",
+                    "$value": "{color.reference.ink}"
+                }
+            },
+            "surface": {
+                "default": {
+                    "$description": "The usual page or component surface.",
+                    "$value": "{color.reference.paper}"
+                }
+            }
+        }
+    }
+}

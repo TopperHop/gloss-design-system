@@ -1,9 +1,13 @@
-// Gloss theme entrypoint.
+// Gloss stylesheet entrypoint.
+
+// This will become generated CSS custom property declarations from src/tokens.
+@import 'tokens';
+
 // Keep Gloss variable overrides above the UIkit imports. UIkit uses Sass
 // defaults, so values declared here can replace them without copying UIkit's
 // source files.
 
-// Add Gloss overrides here as the token system is introduced.
+// Add UIkit-specific Gloss overrides here as they are introduced.
 
 @import 'uikit/src/scss/variables-theme';
 @import 'uikit/src/scss/mixins-theme';

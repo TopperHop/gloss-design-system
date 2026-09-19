@@ -6,7 +6,7 @@
         "node": ">=24.0.0"
     },
     "scripts": {
-        "build:css": "sass --load-path=node_modules --quiet-deps src/theme/gloss.scss dist/css/gloss.css",
+        "build:css": "sass --load-path=node_modules --quiet-deps src/styles/gloss.scss dist/css/gloss.css",
         "format": "prettier --check .",
         "format:write": "prettier --write .",
         "lint": "npm run lint:js && npm run lint:css",
