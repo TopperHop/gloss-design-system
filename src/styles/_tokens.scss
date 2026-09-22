@@ -3,3 +3,24 @@
  * Source: src/tokens/source/
  * Do not edit by hand.
  */
+
+:root {
+    --gls-color-reference-brand-primary: #be0000;
+    --gls-color-reference-brand-primary-active: #890000;
+    --gls-color-reference-brand-primary-hover: #a10000;
+    --gls-color-reference-focus: #005fcc;
+    --gls-color-reference-neutral-0: #ffffff;
+    --gls-color-reference-neutral-100: #f4f4f5;
+    --gls-color-reference-neutral-200: #e9eaea;
+    --gls-color-reference-neutral-900: #21252e;
+    --gls-color-role-button-default-active-background: var(--gls-color-reference-neutral-200);
+    --gls-color-role-button-default-background: var(--gls-color-reference-neutral-0);
+    --gls-color-role-button-default-border: var(--gls-color-reference-neutral-900);
+    --gls-color-role-button-default-hover-background: var(--gls-color-reference-neutral-100);
+    --gls-color-role-button-default-text: var(--gls-color-reference-neutral-900);
+    --gls-color-role-button-primary-active-background: var(--gls-color-reference-brand-primary-active);
+    --gls-color-role-button-primary-background: var(--gls-color-reference-brand-primary);
+    --gls-color-role-button-primary-hover-background: var(--gls-color-reference-brand-primary-hover);
+    --gls-color-role-button-primary-text: var(--gls-color-reference-neutral-0);
+    --gls-color-role-focus: var(--gls-color-reference-focus);
+}

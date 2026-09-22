@@ -1,0 +1,79 @@
+// Gloss button component.
+//
+// This first v3 implementation extends UIkit's button foundation while
+// keeping Gloss's public class names and runtime token API independent from
+// UIkit's Sass variables.
+
+.gls-button {
+    @extend .uk-button;
+
+    border-radius: 0.25rem;
+    font-weight: 600;
+    transition:
+        background-color 120ms ease,
+        border-color 120ms ease,
+        box-shadow 120ms ease,
+        color 120ms ease;
+}
+
+.gls-button:focus-visible {
+    outline: 0.1875rem solid var(--gls-color-role-focus);
+    outline-offset: 0.125rem;
+}
+
+.gls-button:disabled,
+.gls-button[aria-disabled='true'] {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.gls-button-default {
+    @extend .uk-button-default;
+
+    background-color: var(--gls-color-role-button-default-background);
+    border: 0.0625rem solid var(--gls-color-role-button-default-border);
+    color: var(--gls-color-role-button-default-text);
+}
+
+.gls-button-default:hover {
+    background-color: var(--gls-color-role-button-default-hover-background);
+    color: var(--gls-color-role-button-default-text);
+}
+
+.gls-button-default:active,
+.gls-button-default.gls-active {
+    background-color: var(--gls-color-role-button-default-active-background);
+    color: var(--gls-color-role-button-default-text);
+}
+
+.gls-button-primary {
+    @extend .uk-button-primary;
+
+    background-color: var(--gls-color-role-button-primary-background);
+    color: var(--gls-color-role-button-primary-text);
+}
+
+.gls-button-primary:hover {
+    background-color: var(--gls-color-role-button-primary-hover-background);
+    color: var(--gls-color-role-button-primary-text);
+}
+
+.gls-button-primary:active,
+.gls-button-primary.gls-active {
+    background-color: var(--gls-color-role-button-primary-active-background);
+    color: var(--gls-color-role-button-primary-text);
+}
+
+.gls-button-small {
+    @extend .uk-button-small;
+}
+
+.gls-button-large {
+    @extend .uk-button-large;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gls-button {
+        transition-duration: 0.01ms;
+    }
+}

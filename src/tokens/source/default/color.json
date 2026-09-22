@@ -1,0 +1,95 @@
+{
+    "color": {
+        "$type": "color",
+        "reference": {
+            "brand-primary": {
+                "$value": {
+                    "colorSpace": "srgb",
+                    "components": [0.745, 0, 0],
+                    "hex": "#be0000"
+                }
+            },
+            "brand-primary-hover": {
+                "$value": {
+                    "colorSpace": "srgb",
+                    "components": [0.631, 0, 0],
+                    "hex": "#a10000"
+                }
+            },
+            "brand-primary-active": {
+                "$value": {
+                    "colorSpace": "srgb",
+                    "components": [0.537, 0, 0],
+                    "hex": "#890000"
+                }
+            },
+            "neutral-0": {
+                "$value": {
+                    "colorSpace": "srgb",
+                    "components": [1, 1, 1],
+                    "hex": "#ffffff"
+                }
+            },
+            "neutral-100": {
+                "$value": {
+                    "colorSpace": "srgb",
+                    "components": [0.957, 0.957, 0.965],
+                    "hex": "#f4f4f5"
+                }
+            },
+            "neutral-200": {
+                "$value": {
+                    "colorSpace": "srgb",
+                    "components": [0.914, 0.918, 0.918],
+                    "hex": "#e9eaea"
+                }
+            },
+            "neutral-900": {
+                "$value": {
+                    "colorSpace": "srgb",
+                    "components": [0.129, 0.145, 0.161],
+                    "hex": "#21252e"
+                }
+            },
+            "focus": {
+                "$value": {
+                    "colorSpace": "srgb",
+                    "components": [0, 0.373, 0.8],
+                    "hex": "#005fcc"
+                }
+            }
+        },
+        "role": {
+            "button-primary-background": {
+                "$value": "{color.reference.brand-primary}"
+            },
+            "button-primary-hover-background": {
+                "$value": "{color.reference.brand-primary-hover}"
+            },
+            "button-primary-active-background": {
+                "$value": "{color.reference.brand-primary-active}"
+            },
+            "button-primary-text": {
+                "$value": "{color.reference.neutral-0}"
+            },
+            "button-default-background": {
+                "$value": "{color.reference.neutral-0}"
+            },
+            "button-default-hover-background": {
+                "$value": "{color.reference.neutral-100}"
+            },
+            "button-default-active-background": {
+                "$value": "{color.reference.neutral-200}"
+            },
+            "button-default-text": {
+                "$value": "{color.reference.neutral-900}"
+            },
+            "button-default-border": {
+                "$value": "{color.reference.neutral-900}"
+            },
+            "focus": {
+                "$value": "{color.reference.focus}"
+            }
+        }
+    }
+}
