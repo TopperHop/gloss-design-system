@@ -35,6 +35,10 @@ Please include:
 
 The project’s automated checks will grow as the foundation is built. Until then, please call out what you tested locally and be honest about anything you could not verify.
 
+Pull requests run the repository’s GitHub Actions checks automatically. They
+currently verify formatting, linting, token generation, token tests, and the
+CSS build.
+
 ## Questions
 
 If you are unsure whether something belongs in Gloss, or how an existing pattern should evolve, open a discussion. Design-system decisions are easier to maintain when the reasoning is recorded along with the code.
