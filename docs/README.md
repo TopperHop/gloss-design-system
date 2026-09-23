@@ -16,6 +16,21 @@ This synchronizes the selected documentation, compiles Gloss CSS, and copies
 the generated stylesheet into the Jekyll asset directory. The copied CSS is a
 build artifact and should not be edited or committed.
 
+Then start the local Jekyll server with Docker Desktop running:
+
+```sh
+docker run --rm -it \
+  --volume "$PWD/docs:/srv/jekyll" \
+  --publish 4000:4000 \
+  --publish 35729:35729 \
+  jekyll/jekyll:pages \
+  jekyll serve --host 0.0.0.0 --baseurl="" --livereload
+```
+
+Open <http://localhost:4000/> in a browser. Re-run `npm run build:docs` after
+changing source styles or documentation; Jekyll will reload ordinary content
+changes while the server is running.
+
 Layouts live in `_layouts/`, while documentation-only styles live in
 `assets/css/`. The compiled Gloss stylesheet will be added to the published
 site by the documentation deployment workflow.
