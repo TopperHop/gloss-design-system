@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{{ page.title }} | {{ site.title }}</title>
+        <meta name="description" content="{{ page.description | default: site.description }}" />
+        <link rel="stylesheet" href="{{ '/assets/css/gloss.css' | relative_url }}" />
+        <link rel="stylesheet" href="{{ '/assets/css/docs.css' | relative_url }}" />
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="site-header__content">
+                <a class="site-header__title" href="{{ '/' | relative_url }}"> {{ site.title }} </a>
+                <nav aria-label="Primary navigation">
+                    <a href="{{ '/button/' | relative_url }}">Button</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="site-content">{{ content }}</main>
+
+        <footer class="site-footer">
+            <p>Gloss Design System is maintained by University of Utah Health.</p>
+        </footer>
+    </body>
+</html>
