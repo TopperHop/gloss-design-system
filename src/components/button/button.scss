@@ -1,8 +1,9 @@
 // Gloss button component.
-//
 // This first v3 implementation extends UIkit's button foundation while
 // keeping Gloss's public class names and runtime token API independent from
 // UIkit's Sass variables.
+
+/* stylelint-disable scss/at-extend-no-missing-placeholder -- UIkit exposes concrete selectors rather than placeholders. */
 
 .gls-button {
     @extend .uk-button;
@@ -77,3 +78,5 @@
         transition-duration: 0.01ms;
     }
 }
+
+/* stylelint-enable scss/at-extend-no-missing-placeholder */
