@@ -1,9 +1,6 @@
 # Dependencies
 node_modules/
 
-# Generated documentation assets
-docs/assets/css/gloss.css
-docs/assets/css/gloss.css.map
 _site/
 .jekyll-cache/
 .jekyll-metadata
