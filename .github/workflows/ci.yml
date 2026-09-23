@@ -50,3 +50,6 @@ jobs:
 
       - name: Build CSS
         run: npm run build:css
+
+      - name: Verify tracked distribution files
+        run: git diff --exit-code -- dist/

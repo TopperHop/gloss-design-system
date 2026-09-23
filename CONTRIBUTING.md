@@ -14,6 +14,7 @@ Small fixes, documentation improvements, and clearly scoped maintenance changes 
 - Explain the user or developer problem the change solves.
 - Update documentation and examples when behavior or public markup changes.
 - Do not edit generated files by hand.
+- When source styles change, regenerate and commit the tracked files in `dist/`.
 - Follow the existing style of the code around your change.
 - Keep new dependencies to a minimum and explain why one is needed.
 

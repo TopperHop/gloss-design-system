@@ -1,8 +1,7 @@
 # Dependencies
 node_modules/
 
-# Build output and generated documentation
-dist/
+# Generated documentation assets
 docs/assets/css/gloss.css
 docs/assets/css/gloss.css.map
 _site/

@@ -16,6 +16,10 @@ This synchronizes the selected documentation, compiles Gloss CSS, and copies
 the generated stylesheet into the Jekyll asset directory. The copied CSS is a
 build artifact and should not be edited or committed.
 
+The compiled files in `dist/` are tracked because they are the versioned
+distribution consumed by downstream teams. Use the exact Git tag for CDN
+consumption; do not link to `main` for production sites.
+
 Then start the local Jekyll server with Docker Desktop running:
 
 ```sh
