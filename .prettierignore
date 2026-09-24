@@ -15,3 +15,5 @@ src/styles/_tokens.scss
 docs/button.md
 docs/assets/css/gloss.css
 docs/assets/css/gloss.css.map
+docs/assets/js/gloss.js
+docs/assets/js/gloss-icons.js

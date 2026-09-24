@@ -39,6 +39,9 @@ await writeFile(
     path.join(outputDirectory, 'gloss.js'),
     `${transformUiKit(uiKit, 'uikit.js')}\n\n${autocomplete}`,
 );
-await writeFile(path.join(outputDirectory, 'gloss-icons.js'), transformUiKit(uiKitIcons, 'uikit-icons.js'));
+await writeFile(
+    path.join(outputDirectory, 'gloss-icons.js'),
+    transformUiKit(uiKitIcons, 'uikit-icons.js'),
+);
 
 console.log('Built Gloss JavaScript and icon bundles from the UIkit dependency.');

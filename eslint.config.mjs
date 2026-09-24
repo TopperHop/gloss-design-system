@@ -7,6 +7,8 @@ export default [
             'node_modules/**',
             'vendor/**',
             'dist/**',
+            'docs/assets/js/gloss.js',
+            'docs/assets/js/gloss-icons.js',
             '_site/**',
             'coverage/**',
             'playwright-report/**',
