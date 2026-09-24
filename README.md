@@ -34,12 +34,18 @@ The structure will be introduced incrementally as the project develops. The plan
 src/tokens/       Canonical design tokens
 src/styles/       UIkit overrides, generated token CSS, and Gloss styling
 src/js/           Gloss JavaScript and component behavior
+dist/             Generated, versioned CSS and JavaScript distribution files
 docs/             Jekyll documentation and examples
 tests/            Unit, accessibility, interaction, and visual tests
 assets-private/   Locally supplied licensed assets; not open-source code
 ```
 
 Generated files are clearly identified, must not be edited by hand, and are verified by automated checks.
+
+The files in `dist/` are generated distribution artifacts and are intentionally
+tracked. They are part of Gloss's public release surface so downstream teams
+can consume a specific Git tag through a CDN. Regenerate them with
+`npm run build:css`; never edit them directly.
 
 ## Development principles
 

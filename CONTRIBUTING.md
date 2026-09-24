@@ -14,6 +14,7 @@ Small fixes, documentation improvements, and clearly scoped maintenance changes 
 - Explain the user or developer problem the change solves.
 - Update documentation and examples when behavior or public markup changes.
 - Do not edit generated files by hand.
+- When source styles or JavaScript change, regenerate and commit the tracked files in `dist/`.
 - Follow the existing style of the code around your change.
 - Keep new dependencies to a minimum and explain why one is needed.
 
@@ -34,6 +35,10 @@ Please include:
 - any follow-up work that is intentionally out of scope.
 
 The project’s automated checks will grow as the foundation is built. Until then, please call out what you tested locally and be honest about anything you could not verify.
+
+Pull requests run the repository’s GitHub Actions checks automatically. They
+currently verify formatting, linting, token generation, token tests, and the
+CSS build.
 
 ## Questions
 

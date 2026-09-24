@@ -1,0 +1,15 @@
+title: Gloss Design System
+description: University of Utah Health's design system for clinical and academic digital experiences.
+url: 'https://utahhealthcare.github.io'
+baseurl: '/gloss-design-system'
+markdown: kramdown
+permalink: pretty
+
+defaults:
+  - scope:
+      path: ''
+    values:
+      layout: default
+
+exclude:
+  - README.md

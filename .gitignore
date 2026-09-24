@@ -1,8 +1,6 @@
 # Dependencies
 node_modules/
 
-# Build output and generated documentation
-dist/
 _site/
 .jekyll-cache/
 .jekyll-metadata

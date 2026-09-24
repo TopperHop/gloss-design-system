@@ -73,5 +73,7 @@ override an existing default token; themes cannot create one-off token names.
   the need. They should be added deliberately rather than copied from a
   component's declarations.
 
-The first implementation will cover colors only. Typography, spacing, and
-other token categories will be added once their v3 requirements are clear.
+The first implementation covers the color roles needed by the initial button
+component. Typography, spacing, and other token categories will be added once
+their v3 requirements are clear. These button colors are provisional and are
+intended to prove the pipeline, not to finalize brand guidance.
