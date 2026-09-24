@@ -15,8 +15,8 @@
  ========================================================================== */
 
 @supports (-webkit-touch-callout: none) {
-	.gls-hack-ios-disable-parallax {
-		background-attachment: initial !important;
-		background-size: contain !important;
-	}
+    .gls-hack-ios-disable-parallax {
+        background-attachment: initial !important;
+        background-size: contain !important;
+    }
 }

@@ -1,48 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-us" dir="ltr">
-
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Sortable - Gloss tests</title>
         <script src="js/test.js"></script>
 
         <style>
-
             .test-item {
                 font-size: 0.875rem;
             }
-
         </style>
         <script>
-
-            const {on, ready} = Gloss.util;
+            const { on, ready } = Gloss.util;
 
             ready(() =>
                 on(document.body, 'start moved added removed stop', (e, sortable, el) =>
-                    console.log(e.type, sortable, el)
-                )
+                    console.log(e.type, sortable, el),
+                ),
             );
-
         </script>
     </head>
 
     <body>
-
         <div class="gls-container">
-
             <h1>Sortable</h1>
 
             <h2>Grid</h2>
 
-            <ul class="gls-grid-match gls-child-width-1-2 gls-child-width-1-5@m" gls-sortable="handle: .gls-card" gls-grid>
+            <ul
+                class="gls-grid-match gls-child-width-1-2 gls-child-width-1-5@m"
+                gls-sortable="handle: .gls-card"
+                gls-grid
+            >
                 <li>
                     <div class="gls-card gls-card-default gls-card-body">
                         <a href="https://getGloss.com">Link</a>
-                        <img src="images/avatar.jpg" width="40" height="40" alt="">
+                        <img src="images/avatar.jpg" width="40" height="40" alt="" />
                     </div>
                 </li>
-                <li><a class="gls-card gls-card-default gls-card-body gls-display-block" href="https://getGloss.com">Link Handle</a></li>
+                <li>
+                    <a
+                        class="gls-card gls-card-default gls-card-body gls-display-block"
+                        href="https://getGloss.com"
+                        >Link Handle</a
+                    >
+                </li>
                 <li><div class="gls-card gls-card-default gls-card-body">Item 3</div></li>
                 <li><div class="gls-card gls-card-default gls-card-body">Item 4</div></li>
                 <li><div class="gls-card gls-card-default gls-card-body">Item 5</div></li>
@@ -57,73 +60,100 @@
 
             <div class="gls-grid gls-child-width-1-3">
                 <div>
-
                     <h2>Group</h2>
 
                     <div gls-sortable="group: test">
                         <div class="gls-margin">
-                            <div class="gls-card gls-card-default gls-card-body gls-card-small">Item 1</div>
+                            <div class="gls-card gls-card-default gls-card-body gls-card-small">
+                                Item 1
+                            </div>
                         </div>
                         <div class="gls-margin">
-                            <div class="gls-card gls-card-default gls-card-body gls-card-small">Item 2</div>
+                            <div class="gls-card gls-card-default gls-card-body gls-card-small">
+                                Item 2
+                            </div>
                         </div>
                         <div class="gls-margin">
-                            <div class="gls-card gls-card-default gls-card-body gls-card-small">Item 3</div>
+                            <div class="gls-card gls-card-default gls-card-body gls-card-small">
+                                Item 3
+                            </div>
                         </div>
                         <div class="gls-margin">
-                            <div class="gls-card gls-card-default gls-card-body gls-card-small">Item 4</div>
+                            <div class="gls-card gls-card-default gls-card-body gls-card-small">
+                                Item 4
+                            </div>
                         </div>
                         <div class="gls-margin">
-                            <div class="gls-card gls-card-default gls-card-body gls-card-small">Item 5</div>
+                            <div class="gls-card gls-card-default gls-card-body gls-card-small">
+                                Item 5
+                            </div>
                         </div>
                     </div>
-
                 </div>
                 <div>
-
                     <h2>Handle</h2>
 
                     <div gls-sortable="handle: .gls-sortable-handle; group: test">
                         <div class="gls-margin">
                             <div class="gls-card gls-card-default gls-card-body gls-card-small">
-                                <span class="gls-sortable-handle gls-margin-small-right" gls-icon="icon: table"></span> Item 1
+                                <span
+                                    class="gls-sortable-handle gls-margin-small-right"
+                                    gls-icon="icon: table"
+                                ></span>
+                                Item 1
                             </div>
                         </div>
                         <div class="gls-margin">
                             <div class="gls-card gls-card-default gls-card-body gls-card-small">
-                                <span class="gls-sortable-handle gls-margin-small-right" gls-icon="icon: table"></span> Item 2
+                                <span
+                                    class="gls-sortable-handle gls-margin-small-right"
+                                    gls-icon="icon: table"
+                                ></span>
+                                Item 2
                             </div>
                         </div>
                         <div class="gls-margin">
                             <div class="gls-card gls-card-default gls-card-body gls-card-small">
-                                <span class="gls-sortable-handle gls-margin-small-right" gls-icon="icon: table"></span> Item 3
+                                <span
+                                    class="gls-sortable-handle gls-margin-small-right"
+                                    gls-icon="icon: table"
+                                ></span>
+                                Item 3
                             </div>
                         </div>
                         <div class="gls-margin">
                             <div class="gls-card gls-card-default gls-card-body gls-card-small">
-                                <span class="gls-sortable-handle gls-margin-small-right" gls-icon="icon: table"></span> Item 4
+                                <span
+                                    class="gls-sortable-handle gls-margin-small-right"
+                                    gls-icon="icon: table"
+                                ></span>
+                                Item 4
                             </div>
                         </div>
                         <div class="gls-margin">
                             <div class="gls-card gls-card-default gls-card-body gls-card-small">
-                                <span class="gls-sortable-handle gls-margin-small-right" gls-icon="icon: table"></span> Item 5
+                                <span
+                                    class="gls-sortable-handle gls-margin-small-right"
+                                    gls-icon="icon: table"
+                                ></span>
+                                Item 5
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div>
-
                     <h2>Empty</h2>
 
                     <div gls-sortable="group: test"></div>
-
                 </div>
             </div>
 
             <h2>Nav + Custom Drag Class</h2>
 
-            <ul class="gls-nav gls-nav-default gls-width-1-4@m" gls-sortable="cls-custom: test-item gls-box-shadow-small gls-link-muted gls-flex gls-flex-middle gls-background-default">
+            <ul
+                class="gls-nav gls-nav-default gls-width-1-4@m"
+                gls-sortable="cls-custom: test-item gls-box-shadow-small gls-link-muted gls-flex gls-flex-middle gls-background-default"
+            >
                 <li class="gls-active"><a href="#">Active</a></li>
                 <li><a href="#">Item</a></li>
                 <li><a href="#">Item</a></li>
@@ -137,66 +167,205 @@
 
             <h2>Nested Lists</h2>
 
-            <ul class="gls-grid-small gls-grid-match gls-child-width-1-2@m" gls-sortable="group: first" gls-grid>
-                <li><div class="gls-card gls-card-default gls-padding-small">
-                    <ul class="gls-grid-match gls-child-width-1-3" gls-sortable="group: second" gls-grid>
-                        <li><div class="gls-card gls-card-tertiary gls-padding-small">
-                            <ul class="gls-grid-small gls-grid-match gls-child-width-1-1" gls-sortable="group: third" gls-grid>
-                                <li><div class="gls-card gls-card-primary gls-padding-small">Item 1</div></li>
-                                <li><div class="gls-card gls-card-primary gls-padding-small">Item 2</div></li>
-                                <li><div class="gls-card gls-card-primary gls-padding-small">Item 3</div></li>
-                            </ul>
-                        </div></li>
-                        <li><div class="gls-card gls-card-tertiary gls-padding-small">
-                            <ul class="gls-grid-small gls-grid-match gls-child-width-1-1" gls-sortable="group: third" gls-grid>
-                                <li><div class="gls-card gls-card-primary gls-padding-small">Item 4</div></li>
-                                <li><div class="gls-card gls-card-primary gls-padding-small">Item 5</div></li>
-                            </ul>
-                        </div></li>
-                        <li><div class="gls-card gls-card-tertiary gls-padding-small">
-                            <ul class="gls-grid-small gls-grid-match gls-child-width-1-1" gls-sortable="group: third" gls-grid>
-                            </ul>
-                        </div></li>
-                    </ul>
-                </div></li>
-                <li><div class="gls-card gls-card-default gls-padding-small">
-                    <ul class="gls-grid-match gls-child-width-1-3" gls-sortable="group: second" gls-grid>
-                        <li><div class="gls-card gls-card-tertiary gls-padding-small">
-                            <ul class="gls-grid-small gls-grid-match gls-child-width-1-1" gls-sortable="group: third" gls-grid>
-                                <li><div class="gls-card gls-card-primary gls-padding-small">Item 6</div></li>
-                                <li><div class="gls-card gls-card-primary gls-padding-small">Item 7</div></li>
-                            </ul>
-                        </div></li>
-                        <li><div class="gls-card gls-card-tertiary gls-padding-small">
-                            <ul class="gls-grid-small gls-grid-match gls-child-width-1-1" gls-sortable="group: third" gls-grid>
-                                <li><div class="gls-card gls-card-primary gls-padding-small">Item 8</div></li>
-                                <li><div class="gls-card gls-card-primary gls-padding-small">Item 9</div></li>
-                            </ul>
-                        </div></li>
-                        <li><div class="gls-card gls-card-tertiary gls-padding-small">
-                            <ul class="gls-grid-small gls-grid-match gls-child-width-1-1" gls-sortable="group: third" gls-grid>
-                            </ul>
-                        </div></li>
-                    </ul>
-                </div></li>
-                <li><div class="gls-card gls-card-default gls-padding-small">
-                    <ul class="gls-grid-match gls-child-width-1-3" gls-sortable="group: second" gls-grid>
-                        <li><div class="gls-card gls-card-tertiary gls-padding-small">
-                            <ul class="gls-grid-small gls-grid-match gls-child-width-1-1" gls-sortable="group: third" gls-grid>
-                                <li><div class="gls-card gls-card-primary gls-padding-small">Item 10</div></li>
-                            </ul>
-                        </div></li>
-                        <li><div class="gls-card gls-card-tertiary gls-padding-small">
-                            <ul class="gls-grid-small gls-grid-match gls-child-width-1-1" gls-sortable="group: third" gls-grid>
-                                <li><div class="gls-card gls-card-primary gls-padding-small">Item 11</div></li>
-                            </ul>
-                        </div></li>
-                        <li><div class="gls-card gls-card-tertiary gls-padding-small">
-                            <ul class="gls-grid-small gls-grid-match gls-child-width-1-1" gls-sortable="group: third" gls-grid>
-                            </ul>
-                        </div></li>
-                    </ul>
-                </div></li>
+            <ul
+                class="gls-grid-small gls-grid-match gls-child-width-1-2@m"
+                gls-sortable="group: first"
+                gls-grid
+            >
+                <li>
+                    <div class="gls-card gls-card-default gls-padding-small">
+                        <ul
+                            class="gls-grid-match gls-child-width-1-3"
+                            gls-sortable="group: second"
+                            gls-grid
+                        >
+                            <li>
+                                <div class="gls-card gls-card-tertiary gls-padding-small">
+                                    <ul
+                                        class="gls-grid-small gls-grid-match gls-child-width-1-1"
+                                        gls-sortable="group: third"
+                                        gls-grid
+                                    >
+                                        <li>
+                                            <div
+                                                class="gls-card gls-card-primary gls-padding-small"
+                                            >
+                                                Item 1
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="gls-card gls-card-primary gls-padding-small"
+                                            >
+                                                Item 2
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="gls-card gls-card-primary gls-padding-small"
+                                            >
+                                                Item 3
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="gls-card gls-card-tertiary gls-padding-small">
+                                    <ul
+                                        class="gls-grid-small gls-grid-match gls-child-width-1-1"
+                                        gls-sortable="group: third"
+                                        gls-grid
+                                    >
+                                        <li>
+                                            <div
+                                                class="gls-card gls-card-primary gls-padding-small"
+                                            >
+                                                Item 4
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="gls-card gls-card-primary gls-padding-small"
+                                            >
+                                                Item 5
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="gls-card gls-card-tertiary gls-padding-small">
+                                    <ul
+                                        class="gls-grid-small gls-grid-match gls-child-width-1-1"
+                                        gls-sortable="group: third"
+                                        gls-grid
+                                    ></ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="gls-card gls-card-default gls-padding-small">
+                        <ul
+                            class="gls-grid-match gls-child-width-1-3"
+                            gls-sortable="group: second"
+                            gls-grid
+                        >
+                            <li>
+                                <div class="gls-card gls-card-tertiary gls-padding-small">
+                                    <ul
+                                        class="gls-grid-small gls-grid-match gls-child-width-1-1"
+                                        gls-sortable="group: third"
+                                        gls-grid
+                                    >
+                                        <li>
+                                            <div
+                                                class="gls-card gls-card-primary gls-padding-small"
+                                            >
+                                                Item 6
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="gls-card gls-card-primary gls-padding-small"
+                                            >
+                                                Item 7
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="gls-card gls-card-tertiary gls-padding-small">
+                                    <ul
+                                        class="gls-grid-small gls-grid-match gls-child-width-1-1"
+                                        gls-sortable="group: third"
+                                        gls-grid
+                                    >
+                                        <li>
+                                            <div
+                                                class="gls-card gls-card-primary gls-padding-small"
+                                            >
+                                                Item 8
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div
+                                                class="gls-card gls-card-primary gls-padding-small"
+                                            >
+                                                Item 9
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="gls-card gls-card-tertiary gls-padding-small">
+                                    <ul
+                                        class="gls-grid-small gls-grid-match gls-child-width-1-1"
+                                        gls-sortable="group: third"
+                                        gls-grid
+                                    ></ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="gls-card gls-card-default gls-padding-small">
+                        <ul
+                            class="gls-grid-match gls-child-width-1-3"
+                            gls-sortable="group: second"
+                            gls-grid
+                        >
+                            <li>
+                                <div class="gls-card gls-card-tertiary gls-padding-small">
+                                    <ul
+                                        class="gls-grid-small gls-grid-match gls-child-width-1-1"
+                                        gls-sortable="group: third"
+                                        gls-grid
+                                    >
+                                        <li>
+                                            <div
+                                                class="gls-card gls-card-primary gls-padding-small"
+                                            >
+                                                Item 10
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="gls-card gls-card-tertiary gls-padding-small">
+                                    <ul
+                                        class="gls-grid-small gls-grid-match gls-child-width-1-1"
+                                        gls-sortable="group: third"
+                                        gls-grid
+                                    >
+                                        <li>
+                                            <div
+                                                class="gls-card gls-card-primary gls-padding-small"
+                                            >
+                                                Item 11
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="gls-card gls-card-tertiary gls-padding-small">
+                                    <ul
+                                        class="gls-grid-small gls-grid-match gls-child-width-1-1"
+                                        gls-sortable="group: third"
+                                        gls-grid
+                                    ></ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
 
             <h2>JavaScript Options</h2>
@@ -293,8 +462,6 @@
                     </tbody>
                 </table>
             </div>
-
         </div>
-
     </body>
 </html>

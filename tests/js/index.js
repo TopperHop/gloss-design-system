@@ -14,7 +14,7 @@ request.send(null);
 
 const themes = request.status === 200 ? JSON.parse(request.responseText) : {};
 const styles = {
-    '': 'Core'
+    '': 'Core',
 };
 const component = location.pathname
     .split('/')
@@ -71,13 +71,13 @@ on(window, 'load', () =>
                             `<option value="${name}.html">${name
                                 .split('-')
                                 .map(ucfirst)
-                                .join(' ')}</option>`
+                                .join(' ')}</option>`,
                     )
                     .join('')}
             </select>
             <select class="gls-select gls-form-width-small" style="margin: 20px">
                 ${Object.keys(styles)
-                    .map(style => `<option value="${style}">${styles[style]}</option>`)
+                    .map((style) => `<option value="${style}">${styles[style]}</option>`)
                     .join('')}
             </select>
             <select class="gls-select gls-form-width-small" style="margin: 20px">
@@ -90,7 +90,7 @@ on(window, 'load', () =>
                 <span style="margin: 5px">RTL</span>
             </label>-->
         </div>
-    `
+    `,
                 );
 
                 const [$tests, $styles, $inverse, $rtl] = $container.children;
@@ -119,20 +119,18 @@ on(window, 'load', () =>
                 $styles.value = storage[key];
 
                 if ($styles.value) {
-
                     removeClass(docEl, [
                         'gls-theme-core',
                         'gls-theme-uhealth',
                         'gls-theme-huntsman',
                         'gls-theme-hmhi',
                         'gls-theme-safeut',
-                        'gls-theme-moran'
+                        'gls-theme-moran',
                     ]);
 
                     addClass(docEl, `${$styles.value}`);
 
                     console.log(storage[key]);
-
                 }
 
                 on($styles, 'change', () => {
@@ -172,7 +170,7 @@ on(window, 'load', () =>
                         'gls-section-tertiary',
                         'gls-section-gradient',
                         'gls-overlay-default',
-                        'gls-overlay-primary'
+                        'gls-overlay-primary',
                     );
 
                     css(docEl, 'background', $inverse.value === 'dark' ? '#fff' : '#222');
@@ -195,8 +193,8 @@ on(window, 'load', () =>
 
                 css(docEl, 'paddingTop', '');
             }),
-        100
-    )
+        100,
+    ),
 );
 
 css(docEl, 'paddingTop', '80px');

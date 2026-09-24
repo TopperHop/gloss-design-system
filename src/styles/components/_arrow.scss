@@ -25,43 +25,47 @@
  ========================================================================== */
 
 .gls-arrow {
-  /* set base positioning for an arrow */
-  position: relative;
+    /* set base positioning for an arrow */
+    position: relative;
 }
 
 .gls-arrow::before {
-  /* allow any border inherited by ::after to show through */
-  border-width: inherit;
-  border-style: inherit;
-  border-color: transparent;
-  background-clip: content-box;
+    /* allow any border inherited by ::after to show through */
+    border-width: inherit;
+    border-style: inherit;
+    border-color: transparent;
+    background-clip: content-box;
 }
 
 .gls-arrow::after {
-  /* styling and z-space positioning for arrow ::after. Border styling and
+    /* styling and z-space positioning for arrow ::after. Border styling and
   box-shadow will be automatically inherited from the parent element */
-  z-index: -1;
-  border: inherit;
-  box-shadow: inherit;
+    z-index: -1;
+    border: inherit;
+    box-shadow: inherit;
 }
 
 .gls-arrow:--around {
-  /* apply shared position and sizing properties to ::before and ::after */
-  position: absolute;
-  transform: rotate(45deg);
-  background-color: inherit;
-  box-sizing: inherit;
-  width: $arrow-size;
-  height: $arrow-size;
-  content: '';
+    /* apply shared position and sizing properties to ::before and ::after */
+    position: absolute;
+    transform: rotate(45deg);
+    background-color: inherit;
+    box-sizing: inherit;
+    width: $arrow-size;
+    height: $arrow-size;
+    content: '';
 }
 
 /* Size modifiers
  ========================================================================== */
 
-.gls-arrow-small { --arrow-size: $arrow-size-small; }
+.gls-arrow-small {
+    --arrow-size: $arrow-size-small;
+}
 
-.gls-arrow-large { --arrow-size: $arrow-size-large; }
+.gls-arrow-large {
+    --arrow-size: $arrow-size-large;
+}
 
 /* Style modifiers
  ========================================================================== */
@@ -79,28 +83,28 @@
 .gls-arrow-tl::before,
 .gls-arrow-tr::before {
     border-bottom-right-radius: 100%; /* [1] */
-  clip-path: $arrow-t-clip-path; /* [2] */
-  border-top-color: inherit;
-  border-left-color: inherit;
+    clip-path: $arrow-t-clip-path; /* [2] */
+    border-top-color: inherit;
+    border-left-color: inherit;
 }
 
 .gls-arrow-t:--around {
-  /* Positions an arrow at the top(v) center(h) of the parent element */
-  top: calc($arrow-size / -2);
-  left: 50%;
-  margin-left: calc($arrow-size / -2);
+    /* Positions an arrow at the top(v) center(h) of the parent element */
+    top: calc($arrow-size / -2);
+    left: 50%;
+    margin-left: calc($arrow-size / -2);
 }
 
 .gls-arrow-tl:--around {
-  /* Positions an arrow at the top(v) left(h) of the parent element */
-  top: calc($arrow-size / -2);
-  left: $arrow-size;
+    /* Positions an arrow at the top(v) left(h) of the parent element */
+    top: calc($arrow-size / -2);
+    left: $arrow-size;
 }
 
 .gls-arrow-tr:--around {
-  /* Positions an arrow at the top(v) right(h) of the parent element */
-  top: calc($arrow-size / -2);
-  right: $arrow-size;
+    /* Positions an arrow at the top(v) right(h) of the parent element */
+    top: calc($arrow-size / -2);
+    right: $arrow-size;
 }
 
 /**
@@ -110,29 +114,29 @@
 .gls-arrow-r::before,
 .gls-arrow-rt::before,
 .gls-arrow-rb::before {
-  border-bottom-left-radius: 100%; /* [1] */
-  clip-path: $arrow-r-clip-path; /* [2] */
-  border-top-color: inherit;
-  border-right-color: inherit;
+    border-bottom-left-radius: 100%; /* [1] */
+    clip-path: $arrow-r-clip-path; /* [2] */
+    border-top-color: inherit;
+    border-right-color: inherit;
 }
 
 .gls-arrow-rt:--around {
-  /* Positions an arrow at the right(h) top(v) of the parent element */
-  top: $arrow-size;
-  right: calc($arrow-size / -2);
+    /* Positions an arrow at the right(h) top(v) of the parent element */
+    top: $arrow-size;
+    right: calc($arrow-size / -2);
 }
 
 .gls-arrow-r:--around {
-  /* Positions an arrow at the center(v) right(h) of the parent element */
-  top: 50%;
-  right: calc($arrow-size / -2);
-  margin-top: calc($arrow-size / -2);
+    /* Positions an arrow at the center(v) right(h) of the parent element */
+    top: 50%;
+    right: calc($arrow-size / -2);
+    margin-top: calc($arrow-size / -2);
 }
 
 .gls-arrow-rb:--around {
-  /* Positions an arrow at the right(h) bottom(v) of the parent element */
-  right: calc($arrow-size / -2);
-  bottom: $arrow-size;
+    /* Positions an arrow at the right(h) bottom(v) of the parent element */
+    right: calc($arrow-size / -2);
+    bottom: $arrow-size;
 }
 
 /**
@@ -142,29 +146,29 @@
 .gls-arrow-l::before,
 .gls-arrow-lt::before,
 .gls-arrow-lb::before {
-  border-top-right-radius: 100%; /* [1] */
-  clip-path: $arrow-l-clip-path; /* [2] */
-  border-bottom-color: inherit;
-  border-left-color: inherit;
+    border-top-right-radius: 100%; /* [1] */
+    clip-path: $arrow-l-clip-path; /* [2] */
+    border-bottom-color: inherit;
+    border-left-color: inherit;
 }
 
 .gls-arrow-lt:--around {
-  /* Positions an arrow at the left(h) top(v) of the parent element */
-  top: $arrow-size;
-  left: calc($arrow-size / -2);
+    /* Positions an arrow at the left(h) top(v) of the parent element */
+    top: $arrow-size;
+    left: calc($arrow-size / -2);
 }
 
 .gls-arrow-l:--around {
-  /* Positions an arrow at the center(v) left(h) of the parent element */
-  top: 50%;
-  left: calc($arrow-size / -2);
-  margin-top: calc($arrow-size / -2);
+    /* Positions an arrow at the center(v) left(h) of the parent element */
+    top: 50%;
+    left: calc($arrow-size / -2);
+    margin-top: calc($arrow-size / -2);
 }
 
 .gls-arrow-lb:--around {
-  /* Positions an arrow at the left(h) bottom(v) of the parent element */
-  bottom: $arrow-size;
-  left: calc($arrow-size / -2);
+    /* Positions an arrow at the left(h) bottom(v) of the parent element */
+    bottom: $arrow-size;
+    left: calc($arrow-size / -2);
 }
 
 /**
@@ -174,27 +178,27 @@
 .gls-arrow-b::before,
 .gls-arrow-bl::before,
 .gls-arrow-br::before {
-  border-top-left-radius: 100%; /* [1] */
-  clip-path: $arrow-b-clip-path; /* [2] */
-  border-bottom-color: inherit;
-  border-right-color: inherit;
+    border-top-left-radius: 100%; /* [1] */
+    clip-path: $arrow-b-clip-path; /* [2] */
+    border-bottom-color: inherit;
+    border-right-color: inherit;
 }
 
 .gls-arrow-b:--around {
-  /* Positions an arrow at the bottom(v) center(h) of the parent element */
-  bottom: calc($arrow-size / -2);
-  left: 50%;
-  margin-left: calc($arrow-size / -2);
+    /* Positions an arrow at the bottom(v) center(h) of the parent element */
+    bottom: calc($arrow-size / -2);
+    left: 50%;
+    margin-left: calc($arrow-size / -2);
 }
 
 .gls-arrow-bl:--around {
-  /* Positions an arrow at the bottom(v) left(h) of the parent element */
-  bottom: calc($arrow-size / -2);
-  left: $arrow-size;
+    /* Positions an arrow at the bottom(v) left(h) of the parent element */
+    bottom: calc($arrow-size / -2);
+    left: $arrow-size;
 }
 
 .gls-arrow-br:--around {
-  /* Positions an arrow at the bottom(v) right(h) of the parent element */
-  right: $arrow-size;
-  bottom: calc($arrow-size / -2);
+    /* Positions an arrow at the bottom(v) right(h) of the parent element */
+    right: $arrow-size;
+    bottom: calc($arrow-size / -2);
 }

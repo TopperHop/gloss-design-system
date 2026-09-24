@@ -10,7 +10,10 @@ $offcanvas-bar-background: $global-muted-background !default;
 $offcanvas-bar-color: var(--offcanvas-bar-color, var(--global-color)) !default;
 
 $offcanvas-bar-link-color: var(--offcanvas-bar-link-color, var(--global-color)) !default;
-$offcanvas-bar-link-hover-color: var(--offcanvas-bar-link-hover-color, var(--global-link-hover-color)) !default;
+$offcanvas-bar-link-hover-color: var(
+    --offcanvas-bar-link-hover-color,
+    var(--global-link-hover-color)
+) !default;
 $offcanvas-bar-title-color: var(--offcanvas-bar-title-color, var(--global-emphasis-color)) !default;
 $offcanvas-close-color: var(--offcanvas-close-color, var(--global-muted-color)) !default;
 

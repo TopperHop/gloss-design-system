@@ -1,123 +1,160 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-us" dir="ltr">
-
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Toggle - Gloss tests</title>
         <script src="js/test.js"></script>
     </head>
 
     <body>
-
         <div class="gls-container">
-
             <h1>Toggle</h1>
 
             <div class="gls-child-width-1-5@m" gls-grid>
                 <div>
-
                     <h3>One item</h3>
 
                     <p>
-                        <button class="gls-button gls-button-default" type="button" gls-toggle="target: #toggle1">Button</button>
+                        <button
+                            class="gls-button gls-button-default"
+                            type="button"
+                            gls-toggle="target: #toggle1"
+                        >
+                            Button
+                        </button>
                         <a href gls-toggle="target: #toggle1">Link</a>
                     </p>
 
                     <p id="toggle1">What's up?</p>
-
                 </div>
                 <div>
-
                     <h3>Two items</h3>
 
-                    <button class="gls-button gls-button-default" type="button" gls-toggle="target: ~">Toggle</button>
+                    <button
+                        class="gls-button gls-button-default"
+                        type="button"
+                        gls-toggle="target: ~"
+                    >
+                        Toggle
+                    </button>
 
                     <p>Hello!</p>
                     <p hidden>Bazinga!</p>
-
                 </div>
                 <div>
-
                     <h3>Multiple toggles</h3>
 
                     <div class="toggle3">
-                        <button class="gls-button gls-button-default" type="button" gls-toggle="target: .toggle3">Next</button>
+                        <button
+                            class="gls-button gls-button-default"
+                            type="button"
+                            gls-toggle="target: .toggle3"
+                        >
+                            Next
+                        </button>
                         <p>Hello!</p>
                     </div>
 
                     <div class="toggle3" hidden>
-                        <button class="gls-button gls-button-default" type="button" gls-toggle="target: .toggle3">Previous</button>
+                        <button
+                            class="gls-button gls-button-default"
+                            type="button"
+                            gls-toggle="target: .toggle3"
+                        >
+                            Previous
+                        </button>
                         <p>Bazinga!</p>
                     </div>
-
                 </div>
                 <div>
-
                     <h3>Multiple targets</h3>
 
-                    <button class="gls-button gls-button-default gls-margin gls-display-block" gls-toggle="target: ~">Go</button>
+                    <button
+                        class="gls-button gls-button-default gls-margin gls-display-block"
+                        gls-toggle="target: ~"
+                    >
+                        Go
+                    </button>
 
                     <span>What's up?</span>
                     <span>Hello!</span>
                     <p hidden>Bazinga!</p>
-
                 </div>
                 <div>
-
                     <h3>Custom class</h3>
 
-                    <button class="gls-button gls-button-default" gls-toggle="target: +; cls: gls-alert-success">Toggle</button>
+                    <button
+                        class="gls-button gls-button-default"
+                        gls-toggle="target: +; cls: gls-alert-success"
+                    >
+                        Toggle
+                    </button>
 
                     <p class="gls-alert">What's up?</p>
-
                 </div>
                 <div>
-
                     <h3>Animation</h3>
 
-                    <button class="gls-button gls-button-default" gls-toggle="target: +; animation: gls-animation-fade">Toggle</button>
+                    <button
+                        class="gls-button gls-button-default"
+                        gls-toggle="target: +; animation: gls-animation-fade"
+                    >
+                        Toggle
+                    </button>
 
                     <p>Animation</p>
-
                 </div>
                 <div>
-
                     <h3>In/Out Animations</h3>
 
-                    <button class="gls-button gls-button-default" type="button" gls-toggle="target: +; animation: gls-animation-slide-left, gls-animation-slide-top">Toggle</button>
+                    <button
+                        class="gls-button gls-button-default"
+                        type="button"
+                        gls-toggle="target: +; animation: gls-animation-slide-left, gls-animation-slide-top"
+                    >
+                        Toggle
+                    </button>
 
                     <p>Animation</p>
-
                 </div>
                 <div>
-
                     <h3>Queued</h3>
 
-                    <button class="gls-button gls-button-default" type="button" gls-toggle="target: ~; animation: gls-animation-fade; duration: 500; queued: true">Queued</button>
+                    <button
+                        class="gls-button gls-button-default"
+                        type="button"
+                        gls-toggle="target: ~; animation: gls-animation-fade; duration: 500; queued: true"
+                    >
+                        Queued
+                    </button>
 
                     <p>Animation</p>
                     <p hidden>Bazinga!</p>
-
                 </div>
                 <div class="gls-width-expand@m">
-
                     <h3>Mode Media</h3>
 
-                    <div class="gls-alert gls-alert-danger" gls-toggle="cls: gls-alert-success gls-alert-danger; mode: media; media: @xl">
+                    <div
+                        class="gls-alert gls-alert-danger"
+                        gls-toggle="cls: gls-alert-success gls-alert-danger; mode: media; media: @xl"
+                    >
                         Only visibly @xl
                     </div>
-
                 </div>
                 <div>
-
                     <h3>Mode Hover</h3>
 
-                    <button class="gls-button gls-button-default" type="button" gls-toggle="target: ~; mode: hover">Hover, Focus</button>
+                    <button
+                        class="gls-button gls-button-default"
+                        type="button"
+                        gls-toggle="target: ~; mode: hover"
+                    >
+                        Hover, Focus
+                    </button>
 
                     <p>What's up?</p>
                     <p hidden>Hovered, Focused</p>
-
                 </div>
             </div>
 
@@ -156,13 +193,18 @@
                             <td><code>cls</code></td>
                             <td>String</td>
                             <td>false</td>
-                            <td>The class that is being toggled. Defaults to the "hidden" attribute.</td>
+                            <td>
+                                The class that is being toggled. Defaults to the "hidden" attribute.
+                            </td>
                         </tr>
                         <tr>
                             <td><code>animation</code></td>
                             <td>String</td>
                             <td>false</td>
-                            <td>Space-separated names of animations. Comma-separated for animation out.</td>
+                            <td>
+                                Space-separated names of animations. Comma-separated for animation
+                                out.
+                            </td>
                         </tr>
                         <tr>
                             <td><code>duration</code></td>
@@ -179,8 +221,6 @@
                     </tbody>
                 </table>
             </div>
-
         </div>
-
     </body>
 </html>

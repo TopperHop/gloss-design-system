@@ -10,7 +10,11 @@ $inverse-global-primary-background: $global-inverse-color !default;
 $inverse-global-secondary-background: $global-inverse-color !default;
 $inverse-global-tertiary-background: $global-inverse-color !default;
 $inverse-global-muted-background: var(--color-trans-white-1) !default;
-$inverse-global-gradient-background: linear-gradient(180deg, var(--color-gray-8) 0, var(--color-gray-9) 100%) !default;
+$inverse-global-gradient-background: linear-gradient(
+    180deg,
+    var(--color-gray-8) 0,
+    var(--color-gray-9) 100%
+) !default;
 $inverse-global-border: var(--color-trans-white-2) !default;
 
 // Default Button Inverse Overrides (WCAG contrast on dark backgrounds)

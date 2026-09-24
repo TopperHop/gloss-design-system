@@ -1,25 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-us" dir="ltr">
-
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Scrollspy - Gloss tests</title>
         <script src="js/test.js"></script>
         <style>
-
             .test-fixed {
                 position: fixed;
                 top: 20px;
                 right: 20px;
                 z-index: 1;
             }
-
         </style>
     </head>
 
     <body>
-
         <div class="gls-card gls-card-default gls-card-body test-fixed">
             <h3 class="gls-card-title">Scrollspy Nav</h3>
             <ul class="gls-nav gls-nav-default" gls-scrollspy-nav="closest: li; scroll: true">
@@ -41,32 +37,49 @@
         </div>
 
         <div class="gls-container">
-
             <h1>ScrollSpy</h1>
 
             <h2 id="animation-repeat">Single, Repeat, Delay</h2>
 
             <div class="gls-child-width-1-4@m" gls-grid gls-height-match="target: .gls-card">
                 <div>
-                    <div class="gls-card gls-card-default gls-card-body" gls-scrollspy="cls: gls-animation-fade">
-                        <p>The element is animated only the first time it appears in the viewport.</p>
+                    <div
+                        class="gls-card gls-card-default gls-card-body"
+                        gls-scrollspy="cls: gls-animation-fade"
+                    >
+                        <p>
+                            The element is animated only the first time it appears in the viewport.
+                        </p>
                     </div>
                 </div>
                 <div>
-                    <div class="gls-card gls-card-default gls-card-body" gls-scrollspy="cls: gls-animation-slide-right; repeat: true">
+                    <div
+                        class="gls-card gls-card-default gls-card-body"
+                        gls-scrollspy="cls: gls-animation-slide-right; repeat: true"
+                    >
                         <p>The element is animated every time it appears in the viewport.</p>
                     </div>
                 </div>
                 <div>
-                    <div class="gls-card gls-card-default gls-card-body" gls-scrollspy="cls: gls-animation-slide-right; delay: 1500; repeat: true">
-                        <p>The element is animated every time it appears in the viewport but delayed by 1.5s.</p>
+                    <div
+                        class="gls-card gls-card-default gls-card-body"
+                        gls-scrollspy="cls: gls-animation-slide-right; delay: 1500; repeat: true"
+                    >
+                        <p>
+                            The element is animated every time it appears in the viewport but
+                            delayed by 1.5s.
+                        </p>
                     </div>
                 </div>
             </div>
 
             <h2 id="animation-delay">Group, Repeat, Delay</h2>
 
-            <div class="gls-child-width-1-4@m" gls-grid gls-scrollspy="cls: gls-animation-fade; target: .gls-card; delay: 300; repeat: true">
+            <div
+                class="gls-child-width-1-4@m"
+                gls-grid
+                gls-scrollspy="cls: gls-animation-fade; target: .gls-card; delay: 300; repeat: true"
+            >
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <p>The animation of this element is delayed by some milliseconds.</p>
@@ -91,387 +104,629 @@
 
             <h2 id="animation-fade">Group: Fade</h2>
 
-            <div class="gls-child-width-1-4@m gls-margin-xlarge-bottom" gls-grid gls-scrollspy="cls: gls-animation-fade; target: .gls-card; delay: 300; repeat: true">
+            <div
+                class="gls-child-width-1-4@m gls-margin-xlarge-bottom"
+                gls-grid
+                gls-scrollspy="cls: gls-animation-fade; target: .gls-card; delay: 300; repeat: true"
+            >
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Fade</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Fade</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Fade</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Fade</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
             </div>
 
             <h2 id="animation-scale-up">Group: Scale Up</h2>
 
-            <div class="gls-child-width-1-4@m gls-margin-xlarge-bottom" gls-grid gls-scrollspy="cls: gls-animation-scale-up; target: .gls-card; delay: 300; repeat: true">
+            <div
+                class="gls-child-width-1-4@m gls-margin-xlarge-bottom"
+                gls-grid
+                gls-scrollspy="cls: gls-animation-scale-up; target: .gls-card; delay: 300; repeat: true"
+            >
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Scale Up</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Scale Up</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Scale Up</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Scale Up</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="gls-card gls-card-default gls-card-body">
-                        <h3 class="gls-card-title">Scale Up</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="gls-card gls-card-default gls-card-body">
-                        <h3 class="gls-card-title">Scale Up</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="gls-card gls-card-default gls-card-body">
-                        <h3 class="gls-card-title">Scale Up</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="gls-card gls-card-default gls-card-body">
-                        <h3 class="gls-card-title">Scale Up</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div><div>
-                    <div class="gls-card gls-card-default gls-card-body">
-                        <h3 class="gls-card-title">Scale Up</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="gls-card gls-card-default gls-card-body">
-                        <h3 class="gls-card-title">Scale Up</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="gls-card gls-card-default gls-card-body">
-                        <h3 class="gls-card-title">Scale Up</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="gls-card gls-card-default gls-card-body">
-                        <h3 class="gls-card-title">Scale Up</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="gls-card gls-card-default gls-card-body">
-                        <h3 class="gls-card-title">Scale Up</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="gls-card gls-card-default gls-card-body">
-                        <h3 class="gls-card-title">Scale Up</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="gls-card gls-card-default gls-card-body">
-                        <h3 class="gls-card-title">Scale Up</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="gls-card gls-card-default gls-card-body">
-                        <h3 class="gls-card-title">Scale Up</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="gls-card gls-card-default gls-card-body">
-                        <h3 class="gls-card-title">Scale Up</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="gls-card gls-card-default gls-card-body">
-                        <h3 class="gls-card-title">Scale Up</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="gls-card gls-card-default gls-card-body">
-                        <h3 class="gls-card-title">Scale Up</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-                <div>
-                    <div class="gls-card gls-card-default gls-card-body">
-                        <h3 class="gls-card-title">Scale Up</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
 
+                <div>
+                    <div class="gls-card gls-card-default gls-card-body">
+                        <h3 class="gls-card-title">Scale Up</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="gls-card gls-card-default gls-card-body">
+                        <h3 class="gls-card-title">Scale Up</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="gls-card gls-card-default gls-card-body">
+                        <h3 class="gls-card-title">Scale Up</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="gls-card gls-card-default gls-card-body">
+                        <h3 class="gls-card-title">Scale Up</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="gls-card gls-card-default gls-card-body">
+                        <h3 class="gls-card-title">Scale Up</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="gls-card gls-card-default gls-card-body">
+                        <h3 class="gls-card-title">Scale Up</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="gls-card gls-card-default gls-card-body">
+                        <h3 class="gls-card-title">Scale Up</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="gls-card gls-card-default gls-card-body">
+                        <h3 class="gls-card-title">Scale Up</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="gls-card gls-card-default gls-card-body">
+                        <h3 class="gls-card-title">Scale Up</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="gls-card gls-card-default gls-card-body">
+                        <h3 class="gls-card-title">Scale Up</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="gls-card gls-card-default gls-card-body">
+                        <h3 class="gls-card-title">Scale Up</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="gls-card gls-card-default gls-card-body">
+                        <h3 class="gls-card-title">Scale Up</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="gls-card gls-card-default gls-card-body">
+                        <h3 class="gls-card-title">Scale Up</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="gls-card gls-card-default gls-card-body">
+                        <h3 class="gls-card-title">Scale Up</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="gls-card gls-card-default gls-card-body">
+                        <h3 class="gls-card-title">Scale Up</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div class="gls-card gls-card-default gls-card-body">
+                        <h3 class="gls-card-title">Scale Up</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <h2 id="animation-scale-down">Group: Scale Down</h2>
 
-            <div class="gls-child-width-1-4@m gls-margin-xlarge-bottom" gls-grid gls-scrollspy="cls: gls-animation-scale-down; target: .gls-card; delay: 300; repeat: true">
+            <div
+                class="gls-child-width-1-4@m gls-margin-xlarge-bottom"
+                gls-grid
+                gls-scrollspy="cls: gls-animation-scale-down; target: .gls-card; delay: 300; repeat: true"
+            >
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Scale Down</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Scale Down</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Scale Down</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Scale Down</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
             </div>
 
             <h2 id="animation-slide-left">Group: Left</h2>
 
-            <div class="gls-child-width-1-4@m gls-margin-xlarge-bottom" gls-grid gls-scrollspy="cls: gls-animation-slide-left; target: .gls-card; delay: 300; repeat: true">
+            <div
+                class="gls-child-width-1-4@m gls-margin-xlarge-bottom"
+                gls-grid
+                gls-scrollspy="cls: gls-animation-slide-left; target: .gls-card; delay: 300; repeat: true"
+            >
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Left</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Left</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Left</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Left</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
             </div>
 
             <h2 id="animation-slide-right">Group: Right</h2>
 
-            <div class="gls-child-width-1-4@m gls-margin-xlarge-bottom" gls-grid gls-scrollspy="cls: gls-animation-slide-right; target: .gls-card; delay: 300; repeat: true">
+            <div
+                class="gls-child-width-1-4@m gls-margin-xlarge-bottom"
+                gls-grid
+                gls-scrollspy="cls: gls-animation-slide-right; target: .gls-card; delay: 300; repeat: true"
+            >
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Right</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Right</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Right</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Right</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
             </div>
 
             <h2 id="animation-slide-top">Group: Top</h2>
 
-            <div class="gls-child-width-1-4@m gls-margin-xlarge-bottom" gls-grid gls-scrollspy="cls: gls-animation-slide-top; target: .gls-card; delay: 300; repeat: true">
+            <div
+                class="gls-child-width-1-4@m gls-margin-xlarge-bottom"
+                gls-grid
+                gls-scrollspy="cls: gls-animation-slide-top; target: .gls-card; delay: 300; repeat: true"
+            >
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Top</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Top</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Top</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Top</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
             </div>
 
             <h2 id="animation-slide-bottom">Group: Bottom</h2>
 
-            <div class="gls-child-width-1-4@m gls-margin-xlarge-bottom" gls-grid gls-scrollspy="cls: gls-animation-slide-bottom; target: .gls-card; delay: 300; repeat: true">
+            <div
+                class="gls-child-width-1-4@m gls-margin-xlarge-bottom"
+                gls-grid
+                gls-scrollspy="cls: gls-animation-slide-bottom; target: .gls-card; delay: 300; repeat: true"
+            >
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Bottom</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Bottom</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Bottom</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Bottom</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
             </div>
 
             <h2 id="animation-different">Different Animations</h2>
 
-            <div class="gls-child-width-1-4@m gls-margin-xlarge-bottom" gls-grid gls-scrollspy="cls: gls-animation-slide-bottom; target: .gls-card; delay: 300; repeat: true">
+            <div
+                class="gls-child-width-1-4@m gls-margin-xlarge-bottom"
+                gls-grid
+                gls-scrollspy="cls: gls-animation-slide-bottom; target: .gls-card; delay: 300; repeat: true"
+            >
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Bottom</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
                 <div>
-                    <div class="gls-card gls-card-default gls-card-body" gls-scrollspy-class="gls-animation-slide-top">
+                    <div
+                        class="gls-card gls-card-default gls-card-body"
+                        gls-scrollspy-class="gls-animation-slide-top"
+                    >
                         <h3 class="gls-card-title">Top</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Bottom</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
                 <div>
-                    <div class="gls-card gls-card-default gls-card-body" gls-scrollspy-class="gls-animation-slide-top">
+                    <div
+                        class="gls-card gls-card-default gls-card-body"
+                        gls-scrollspy-class="gls-animation-slide-top"
+                    >
                         <h3 class="gls-card-title">Top</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
                 </div>
             </div>
 
             <h2 id="animation-stroke">Group: Stroke</h2>
 
-            <div class="gls-child-width-1-4@m gls-text-center gls-margin-xlarge-bottom" gls-grid gls-scrollspy="cls: gls-animation-stroke; target: svg; delay: 300; repeat: true">
+            <div
+                class="gls-child-width-1-4@m gls-text-center gls-margin-xlarge-bottom"
+                gls-grid
+                gls-scrollspy="cls: gls-animation-stroke; target: svg; delay: 300; repeat: true"
+            >
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Stroke</h3>
-                        <img width="80" height="80" src="images/icons.svg#cloud-upload" gls-svg="stroke-animation: true">
+                        <img
+                            width="80"
+                            height="80"
+                            src="images/icons.svg#cloud-upload"
+                            gls-svg="stroke-animation: true"
+                        />
                     </div>
                 </div>
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Stroke</h3>
-                        <img width="80" height="80" src="images/icons.svg#cloud-upload" gls-svg="stroke-animation: true">
+                        <img
+                            width="80"
+                            height="80"
+                            src="images/icons.svg#cloud-upload"
+                            gls-svg="stroke-animation: true"
+                        />
                     </div>
                 </div>
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Stroke</h3>
-                        <img width="80" height="80" src="images/icons.svg#cloud-upload" gls-svg="stroke-animation: true">
+                        <img
+                            width="80"
+                            height="80"
+                            src="images/icons.svg#cloud-upload"
+                            gls-svg="stroke-animation: true"
+                        />
                     </div>
                 </div>
                 <div>
                     <div class="gls-card gls-card-default gls-card-body">
                         <h3 class="gls-card-title">Stroke</h3>
-                        <img width="80" height="80" src="images/icons.svg#cloud-upload" gls-svg="stroke-animation: true">
+                        <img
+                            width="80"
+                            height="80"
+                            src="images/icons.svg#cloud-upload"
+                            gls-svg="stroke-animation: true"
+                        />
                     </div>
                 </div>
             </div>
 
             <h2 id="animation-stroke-fade">Different Animations: Stroke + Fade</h2>
 
-            <div class="gls-child-width-1-4@m gls-text-center gls-margin-xlarge-bottom" gls-grid gls-scrollspy="cls: gls-animation-stroke; target: .gls-card, svg; delay: 300; repeat: true">
+            <div
+                class="gls-child-width-1-4@m gls-text-center gls-margin-xlarge-bottom"
+                gls-grid
+                gls-scrollspy="cls: gls-animation-stroke; target: .gls-card, svg; delay: 300; repeat: true"
+            >
                 <div>
-                    <div class="gls-card gls-card-default gls-card-body" gls-scrollspy-class="gls-animation-fade">
+                    <div
+                        class="gls-card gls-card-default gls-card-body"
+                        gls-scrollspy-class="gls-animation-fade"
+                    >
                         <h3 class="gls-card-title">Stroke</h3>
-                        <img width="80" height="80" src="images/icons.svg#cloud-upload" gls-svg="stroke-animation: true">
+                        <img
+                            width="80"
+                            height="80"
+                            src="images/icons.svg#cloud-upload"
+                            gls-svg="stroke-animation: true"
+                        />
                     </div>
                 </div>
                 <div>
-                    <div class="gls-card gls-card-default gls-card-body" gls-scrollspy-class="gls-animation-fade">
+                    <div
+                        class="gls-card gls-card-default gls-card-body"
+                        gls-scrollspy-class="gls-animation-fade"
+                    >
                         <h3 class="gls-card-title">Stroke</h3>
-                        <img width="80" height="80" src="images/icons.svg#cloud-upload" gls-svg="stroke-animation: true">
+                        <img
+                            width="80"
+                            height="80"
+                            src="images/icons.svg#cloud-upload"
+                            gls-svg="stroke-animation: true"
+                        />
                     </div>
                 </div>
                 <div>
-                    <div class="gls-card gls-card-default gls-card-body" gls-scrollspy-class="gls-animation-fade">
+                    <div
+                        class="gls-card gls-card-default gls-card-body"
+                        gls-scrollspy-class="gls-animation-fade"
+                    >
                         <h3 class="gls-card-title">Stroke</h3>
-                        <img width="80" height="80" src="images/icons.svg#cloud-upload" gls-svg="stroke-animation: true">
+                        <img
+                            width="80"
+                            height="80"
+                            src="images/icons.svg#cloud-upload"
+                            gls-svg="stroke-animation: true"
+                        />
                     </div>
                 </div>
                 <div>
-                    <div class="gls-card gls-card-default gls-card-body" gls-scrollspy-class="gls-animation-fade">
+                    <div
+                        class="gls-card gls-card-default gls-card-body"
+                        gls-scrollspy-class="gls-animation-fade"
+                    >
                         <h3 class="gls-card-title">Stroke</h3>
-                        <img width="80" height="80" src="images/icons.svg#cloud-upload" gls-svg="stroke-animation: true">
+                        <img
+                            width="80"
+                            height="80"
+                            src="images/icons.svg#cloud-upload"
+                            gls-svg="stroke-animation: true"
+                        />
                     </div>
                 </div>
             </div>
@@ -479,10 +734,16 @@
             <h2>Adjacent Sibling (Test for Scrollspy Nav)</h2>
 
             <div id="adjacent1" class="gls-section gls-section-primary gls-text-center">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.
+                </p>
             </div>
             <div id="adjacent2" class="gls-section gls-section-secondary gls-text-center">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua.
+                </p>
             </div>
 
             <h2>JavaScript Options</h2>
@@ -575,7 +836,10 @@
                             <td><code>overflow</code></td>
                             <td>Boolean</td>
                             <td>true</td>
-                            <td>If overflow is set to true, the first or last item will stay active if above or below the navigation.</td>
+                            <td>
+                                If overflow is set to true, the first or last item will stay active
+                                if above or below the navigation.
+                            </td>
                         </tr>
                         <tr>
                             <td><code>offset</code></td>
@@ -586,8 +850,6 @@
                     </tbody>
                 </table>
             </div>
-
         </div>
-
     </body>
 </html>

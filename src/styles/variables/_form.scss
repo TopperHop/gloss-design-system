@@ -7,7 +7,9 @@ $form-border: $global-border !default;
 $form-border-radius: $global-border-radius !default;
 
 $form-height: $global-control-height !default;
-$form-line-height: calc($form-height - (2 * 1px)) !default; // hardcode 1px to avoid calc math issues
+$form-line-height: calc(
+    $form-height - (2 * 1px)
+) !default; // hardcode 1px to avoid calc math issues
 $form-padding-horizontal: 10px !default;
 $form-padding-vertical: 6px !default; // calc(10px * 0.6)
 $form-focus-background: $global-background !default;

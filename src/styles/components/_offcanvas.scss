@@ -20,7 +20,6 @@
  *
  * ======================================================================== */
 
-
 // ========================================================================
 // Component: Offcanvas Bespoke Modifiers
 // ========================================================================
@@ -38,24 +37,30 @@ $offcanvas-bar-padding-horizontal-m-local: var(--global-medium-space);
 // by applying negative margins corresponding to the offcanvas padding.
 
 .gls-offcanvas-bar .gls-section {
-  margin-left: calc(#{$offcanvas-bar-padding-horizontal-local} * -1);
-  margin-right: calc(#{$offcanvas-bar-padding-horizontal-local} * -1);
+    margin-left: calc(#{$offcanvas-bar-padding-horizontal-local} * -1);
+    margin-right: calc(#{$offcanvas-bar-padding-horizontal-local} * -1);
 
-  @media (min-width: $breakpoint-small) {
-    margin-left: calc(#{$offcanvas-bar-padding-horizontal-m-local} * -1);
-    margin-right: calc(#{$offcanvas-bar-padding-horizontal-m-local} * -1);
-  }
+    @media (min-width: $breakpoint-small) {
+        margin-left: calc(#{$offcanvas-bar-padding-horizontal-m-local} * -1);
+        margin-right: calc(#{$offcanvas-bar-padding-horizontal-m-local} * -1);
+    }
 }
 
 .gls-offcanvas-bar .gls-section:first-child,
 .gls-offcanvas-close + .gls-section {
-  margin-top: calc(#{$offcanvas-bar-padding-vertical-local} * -1);
-  padding-top: calc(#{$offcanvas-bar-padding-vertical-local} + (#{$offcanvas-close-position-local} + #{$offcanvas-close-padding-local}));
+    margin-top: calc(#{$offcanvas-bar-padding-vertical-local} * -1);
+    padding-top: calc(
+        #{$offcanvas-bar-padding-vertical-local} +
+            (#{$offcanvas-close-position-local} + #{$offcanvas-close-padding-local})
+    );
 
-  @media (min-width: $breakpoint-small) {
-    margin-top: calc(#{$offcanvas-bar-padding-vertical-m-local} * -1);
-    padding-top: calc(#{$offcanvas-bar-padding-vertical-m-local} + (#{$offcanvas-close-position-local} + #{$offcanvas-close-padding-local}));
-  }
+    @media (min-width: $breakpoint-small) {
+        margin-top: calc(#{$offcanvas-bar-padding-vertical-m-local} * -1);
+        padding-top: calc(
+            #{$offcanvas-bar-padding-vertical-m-local} +
+                (#{$offcanvas-close-position-local} + #{$offcanvas-close-padding-local})
+        );
+    }
 }
 
 // Muted section override inside offcanvas
@@ -65,11 +70,11 @@ $offcanvas-bar-padding-horizontal-m-local: var(--global-medium-space);
 
 // Container padding reset inside offcanvas
 .gls-offcanvas-bar .gls-container {
-  padding-left: $offcanvas-bar-padding-horizontal-local;
-  padding-right: $offcanvas-bar-padding-horizontal-local;
+    padding-left: $offcanvas-bar-padding-horizontal-local;
+    padding-right: $offcanvas-bar-padding-horizontal-local;
 
-  @media (min-width: $breakpoint-small) {
-    padding-left: $offcanvas-bar-padding-horizontal-m-local;
-    padding-right: $offcanvas-bar-padding-horizontal-m-local;
-  }
+    @media (min-width: $breakpoint-small) {
+        padding-left: $offcanvas-bar-padding-horizontal-m-local;
+        padding-right: $offcanvas-bar-padding-horizontal-m-local;
+    }
 }

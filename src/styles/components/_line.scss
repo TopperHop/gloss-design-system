@@ -24,16 +24,16 @@
  ========================================================================== */
 
 .gls-line {
-  /* set base positioning for line */
-  position: relative;
+    /* set base positioning for line */
+    position: relative;
 }
 
 .gls-line::before {
-  border-color: $line-color;
-  border-style: $line-style;
-  border-width: 0;
-  content: '';
-  position: absolute;
+    border-color: $line-color;
+    border-style: $line-style;
+    border-width: 0;
+    content: '';
+    position: absolute;
 }
 
 /* Style modifiers
@@ -45,8 +45,8 @@
 .gls-line-l::before,
 .gls-line-lt::before,
 .gls-line-lb::before {
-  border-top-width: $line-size;
-  width: $line-width;
+    border-top-width: $line-size;
+    width: $line-width;
 }
 
 .gls-line-t::before,
@@ -55,8 +55,8 @@
 .gls-line-b::before,
 .gls-line-bl::before,
 .gls-line-br::before {
-  border-left-width: $line-size;
-  height: $line-height;
+    border-left-width: $line-size;
+    height: $line-height;
 }
 
 /**
@@ -66,19 +66,19 @@
 .gls-line-t::before,
 .gls-line-tl::before,
 .gls-line-tr::before {
-  bottom: 100%;
+    bottom: 100%;
 }
 
 .gls-line-t::before {
-  left: calc(50% - ($line-size / 2));
+    left: calc(50% - ($line-size / 2));
 }
 
 .gls-line-tl::before {
-  left: calc(15% - ($line-size / 2));
+    left: calc(15% - ($line-size / 2));
 }
 
 .gls-line-tr::before {
-  left: calc(85% - ($line-size / 2));
+    left: calc(85% - ($line-size / 2));
 }
 
 /**
@@ -88,19 +88,19 @@
 .gls-line-r::before,
 .gls-line-rt::before,
 .gls-line-rb::before {
-  left: 100%;
+    left: 100%;
 }
 
 .gls-line-rt::before {
-  top: calc(15% - ($line-size / 2));
+    top: calc(15% - ($line-size / 2));
 }
 
 .gls-line-r::before {
-  top: calc(50% - ($line-size / 2));
+    top: calc(50% - ($line-size / 2));
 }
 
 .gls-line-rb::before {
-  top: calc(85% - ($line-size / 2));
+    top: calc(85% - ($line-size / 2));
 }
 
 /**
@@ -110,19 +110,19 @@
 .gls-line-l::before,
 .gls-line-lt::before,
 .gls-line-lb::before {
-  right: 100%;
+    right: 100%;
 }
 
 .gls-line-lt::before {
-  top: calc(15% - ($line-size / 2));
+    top: calc(15% - ($line-size / 2));
 }
 
 .gls-line-l::before {
-  top: calc(50% - ($line-size / 2));
+    top: calc(50% - ($line-size / 2));
 }
 
 .gls-line-lb::before {
-  top: calc(85% - ($line-size / 2));
+    top: calc(85% - ($line-size / 2));
 }
 
 /**
@@ -132,17 +132,17 @@
 .gls-line-b::before,
 .gls-line-bl::before,
 .gls-line-br::before {
-  top: 100%;
+    top: 100%;
 }
 
 .gls-line-b::before {
-  left: calc(50% - ($line-size / 2));
+    left: calc(50% - ($line-size / 2));
 }
 
 .gls-line-bl::before {
-  left: calc(15% - ($line-size / 2));
+    left: calc(15% - ($line-size / 2));
 }
 
 .gls-line-br::before {
-  left: calc(85% - ($line-size / 2));
+    left: calc(85% - ($line-size / 2));
 }

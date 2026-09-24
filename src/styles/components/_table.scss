@@ -25,13 +25,13 @@
 // ========================================================================
 
 .gls-table-sticky-headers {
-  th {
-    position: sticky;
-    top: 0;
-    background-color: var(--global-background);
-    z-index: 10;
+    th {
+        position: sticky;
+        top: 0;
+        background-color: var(--global-background);
+        z-index: 10;
 
-    // Ensure borders don't collapse weirdly on sticky headers
-    box-shadow: inset 0 -1px 0 var(--global-border);
-  }
+        // Ensure borders don't collapse weirdly on sticky headers
+        box-shadow: inset 0 -1px 0 var(--global-border);
+    }
 }

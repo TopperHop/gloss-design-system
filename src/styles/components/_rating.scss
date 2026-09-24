@@ -14,10 +14,10 @@
  ========================================================================== */
 
 .gls-rating {
-  display: inline-block;
-  font-size: $rating-size;
-  line-height: 1;
-  position: relative;
+    display: inline-block;
+    font-size: $rating-size;
+    line-height: 1;
+    position: relative;
 }
 
 /*
@@ -26,8 +26,8 @@
  * role="img" and aria-label.
  */
 
-.gls-rating > [aria-hidden="true"] {
-  display: none;
+.gls-rating > [aria-hidden='true'] {
+    display: none;
 }
 
 /*
@@ -35,10 +35,10 @@
  */
 
 .gls-rating::before {
-  color: $rating-background;
-  content: $rating-icon-empty;
-  display: block;
-  white-space: nowrap;
+    color: $rating-background;
+    content: $rating-icon-empty;
+    display: block;
+    white-space: nowrap;
 }
 
 /*
@@ -46,17 +46,13 @@
  */
 
 .gls-rating::after {
-  color: $rating-fill;
-  content: $rating-icon-filled;
-  inset: 0 auto 0 0;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: clamp(
-    0%,
-    calc($rating / $rating-max * 100%),
-    100%
-  );
+    color: $rating-fill;
+    content: $rating-icon-filled;
+    inset: 0 auto 0 0;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: clamp(0%, calc($rating / $rating-max * 100%), 100%);
 }
 
 /* Size modifier
@@ -66,23 +62,27 @@
  * Small
  */
 
-.gls-rating-small { font-size: $rating-small; }
+.gls-rating-small {
+    font-size: $rating-small;
+}
 
 /*
  * Large
  */
 
-.gls-rating-large { font-size: $rating-large; }
+.gls-rating-large {
+    font-size: $rating-large;
+}
 
 /* Forced colors
  ========================================================================== */
 
 @media (forced-colors: active) {
-  .gls-rating::before {
-    color: GrayText;
-  }
+    .gls-rating::before {
+        color: GrayText;
+    }
 
-  .gls-rating::after {
-    color: CanvasText;
-  }
+    .gls-rating::after {
+        color: CanvasText;
+    }
 }

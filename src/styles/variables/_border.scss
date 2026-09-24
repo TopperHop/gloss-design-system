@@ -3,8 +3,8 @@
 // ========================================================================
 
 $border-default-width: $global-border-width !default;
-$border-thick-width: calc( $border-default-width * 2 ) !default;
-$border-thicker-width: calc( $border-default-width * 4 ) !default;
+$border-thick-width: calc($border-default-width * 2) !default;
+$border-thicker-width: calc($border-default-width * 4) !default;
 $border-default-color: $global-border !default;
 $border-primary-color: $global-primary-background !default;
 $border-secondary-color: $global-secondary-background !default;

@@ -1,22 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-us" dir="ltr">
-
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Notification - Gloss tests</title>
         <script src="js/test.js"></script>
     </head>
 
     <body>
-
         <div class="gls-container">
-
             <h1>Notification</h1>
 
             <div class="gls-child-width-1-2@m" gls-grid>
                 <div>
-
                     <p class="gls-notification-message">
                         <a href="#" class="gls-notification-close" gls-close></a>
                         Message
@@ -46,41 +42,164 @@
                         <a href="#" class="gls-notification-close" gls-close></a>
                         Danger message
                     </p>
-
                 </div>
                 <div>
-
                     <p gls-margin>
-                        <button class="gls-button gls-button-default" type="button" onclick="Gloss.notification({message: 'Message', pos: 'top-left'})">Top Left</button>
-                        <button class="gls-button gls-button-default" type="button" onclick="Gloss.notification({message: 'Message', pos: 'top-center'})">Top Center</button>
-                        <button class="gls-button gls-button-default" type="button" onclick="Gloss.notification({message: 'Message', pos: 'top-right'})">Top Right</button>
+                        <button
+                            class="gls-button gls-button-default"
+                            type="button"
+                            onclick="Gloss.notification({ message: 'Message', pos: 'top-left' })"
+                        >
+                            Top Left
+                        </button>
+                        <button
+                            class="gls-button gls-button-default"
+                            type="button"
+                            onclick="Gloss.notification({ message: 'Message', pos: 'top-center' })"
+                        >
+                            Top Center
+                        </button>
+                        <button
+                            class="gls-button gls-button-default"
+                            type="button"
+                            onclick="Gloss.notification({ message: 'Message', pos: 'top-right' })"
+                        >
+                            Top Right
+                        </button>
                     </p>
 
                     <p gls-margin>
-                        <button class="gls-button gls-button-default" type="button" onclick="Gloss.notification({message: 'Message', pos: 'bottom-left'})">Bottom Left</button>
-                        <button class="gls-button gls-button-default" type="button" onclick="Gloss.notification({message: 'Message', pos: 'bottom-center'})">Bottom Center</button>
-                        <button class="gls-button gls-button-default" type="button" onclick="Gloss.notification({message: 'Message', pos: 'bottom-right'})">Bottom Right</button>
+                        <button
+                            class="gls-button gls-button-default"
+                            type="button"
+                            onclick="Gloss.notification({ message: 'Message', pos: 'bottom-left' })"
+                        >
+                            Bottom Left
+                        </button>
+                        <button
+                            class="gls-button gls-button-default"
+                            type="button"
+                            onclick="
+                                Gloss.notification({ message: 'Message', pos: 'bottom-center' })
+                            "
+                        >
+                            Bottom Center
+                        </button>
+                        <button
+                            class="gls-button gls-button-default"
+                            type="button"
+                            onclick="
+                                Gloss.notification({ message: 'Message', pos: 'bottom-right' })
+                            "
+                        >
+                            Bottom Right
+                        </button>
                     </p>
 
                     <h2>Styles</h2>
 
                     <p gls-margin>
-                        <button class="gls-button gls-button-default" type="button" onclick="Gloss.notification({message: 'Primary message', status: 'primary'})">Primary</button>
-                        <button class="gls-button gls-button-default" type="button" onclick="Gloss.notification({message: 'Info message', status: 'info'})">Info</button>
-                        <button class="gls-button gls-button-default" type="button" onclick="Gloss.notification({message: 'Success message', status: 'success'})">Success</button>
-                        <button class="gls-button gls-button-default" type="button" onclick="Gloss.notification({message: 'Warning message', status: 'warning'})">Warning</button>
-                        <button class="gls-button gls-button-default" type="button" onclick="Gloss.notification({message: 'Danger message', status: 'danger'})">Danger</button>
+                        <button
+                            class="gls-button gls-button-default"
+                            type="button"
+                            onclick="
+                                Gloss.notification({
+                                    message: 'Primary message',
+                                    status: 'primary',
+                                })
+                            "
+                        >
+                            Primary
+                        </button>
+                        <button
+                            class="gls-button gls-button-default"
+                            type="button"
+                            onclick="
+                                Gloss.notification({ message: 'Info message', status: 'info' })
+                            "
+                        >
+                            Info
+                        </button>
+                        <button
+                            class="gls-button gls-button-default"
+                            type="button"
+                            onclick="
+                                Gloss.notification({
+                                    message: 'Success message',
+                                    status: 'success',
+                                })
+                            "
+                        >
+                            Success
+                        </button>
+                        <button
+                            class="gls-button gls-button-default"
+                            type="button"
+                            onclick="
+                                Gloss.notification({
+                                    message: 'Warning message',
+                                    status: 'warning',
+                                })
+                            "
+                        >
+                            Warning
+                        </button>
+                        <button
+                            class="gls-button gls-button-default"
+                            type="button"
+                            onclick="
+                                Gloss.notification({ message: 'Danger message', status: 'danger' })
+                            "
+                        >
+                            Danger
+                        </button>
                     </p>
 
                     <h2>Specials</h2>
 
                     <p gls-margin>
-                        <button class="gls-button gls-button-default" type="button" onclick="Gloss.notification({message: '<span gls-icon=\'icon: check\'></span> Message with an icon'})">With icon</button>
-                        <button class="gls-button gls-button-default" type="button" onclick="Gloss.notification({message: '<a href=\'#new-location\'>Message with a link</a>'})">With link</button>
-                        <button class="gls-button gls-button-default" type="button"  onclick="Gloss.notification({message: 'Message without timeout', timeout: 0})">No Timeout</button>
-                        <button class="gls-button gls-button-default" onclick="Gloss.notification.closeAll()">Close All</button>
+                        <button
+                            class="gls-button gls-button-default"
+                            type="button"
+                            onclick="
+                                Gloss.notification({
+                                    message:
+                                        '<span gls-icon=\'icon: check\'></span> Message with an icon',
+                                })
+                            "
+                        >
+                            With icon
+                        </button>
+                        <button
+                            class="gls-button gls-button-default"
+                            type="button"
+                            onclick="
+                                Gloss.notification({
+                                    message: '<a href=\'#new-location\'>Message with a link</a>',
+                                })
+                            "
+                        >
+                            With link
+                        </button>
+                        <button
+                            class="gls-button gls-button-default"
+                            type="button"
+                            onclick="
+                                Gloss.notification({
+                                    message: 'Message without timeout',
+                                    timeout: 0,
+                                })
+                            "
+                        >
+                            No Timeout
+                        </button>
+                        <button
+                            class="gls-button gls-button-default"
+                            onclick="Gloss.notification.closeAll()"
+                        >
+                            Close All
+                        </button>
                     </p>
-
                 </div>
             </div>
 
@@ -113,13 +232,18 @@
                             <td><code>timeout</code></td>
                             <td>Number</td>
                             <td>5000</td>
-                            <td>Visibility duration before a notification disappears. If set to `0`, notification will not hide automatically.</td>
+                            <td>
+                                Visibility duration before a notification disappears. If set to `0`,
+                                notification will not hide automatically.
+                            </td>
                         </tr>
                         <tr>
                             <td><code>group</code></td>
                             <td>String</td>
                             <td>null</td>
-                            <td>Useful if you want to close all notifications in a specific group.</td>
+                            <td>
+                                Useful if you want to close all notifications in a specific group.
+                            </td>
                         </tr>
                         <tr>
                             <td><code>pos</code></td>
@@ -131,13 +255,14 @@
                             <td><code>container</code></td>
                             <td>Boolean</td>
                             <td>true</td>
-                            <td>Define a target container via a selector to specify where the notification should be appended in the DOM.</td>
+                            <td>
+                                Define a target container via a selector to specify where the
+                                notification should be appended in the DOM.
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-
         </div>
-
     </body>
 </html>

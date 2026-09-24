@@ -8,15 +8,15 @@ $icon-link-active-color-local: var(--color-gray-8);
 
 // Icon Button Core Variable Injection via Hook
 @mixin hook-icon-button() {
-  width: $icon-button-size-local;
-  height: $icon-button-size-local;
-  transition: 0.1s ease-in-out;
-  transition-property: color, background-color;
+    width: $icon-button-size-local;
+    height: $icon-button-size-local;
+    transition: 0.1s ease-in-out;
+    transition-property: color, background-color;
 }
 
 // Icon Link Overrides
 @mixin hook-icon-link-active() {
-  color: $icon-link-active-color-local;
+    color: $icon-link-active-color-local;
 }
 
 // ========================================================================
@@ -30,10 +30,10 @@ $icon-link-active-color-local: var(--color-gray-8);
 
 .gls-icon:not(.gls-preserve)[fill='none'],
 .gls-svg:not(.gls-preserve)[fill='none'] {
-  fill: none;
+    fill: none;
 }
 
 .gls-icon:not(.gls-preserve)[stroke='none'],
 .gls-svg:not(.gls-preserve)[stroke='none'] {
-  stroke: none;
+    stroke: none;
 }

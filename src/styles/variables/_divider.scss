@@ -4,8 +4,8 @@
 
 $divider-margin-vertical: $global-small-space !default;
 $divider-thin-width: $global-border-width !default;
-$divider-thick-width: calc( $divider-thin-width * 2 ) !default;
-$divider-thicker-width: calc( $divider-thin-width * 4 ) !default;
+$divider-thick-width: calc($divider-thin-width * 2) !default;
+$divider-thicker-width: calc($divider-thin-width * 4) !default;
 $divider-width: $divider-thin-width !default;
 $divider-icon-width: 50px !default;
 $divider-icon-height: 30px !default;

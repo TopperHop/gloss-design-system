@@ -1,17 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-us" dir="ltr">
-
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Countdown - Gloss tests</title>
         <script src="js/test.js"></script>
     </head>
 
     <body>
-
         <div class="gls-container">
-
             <h1>Countdown</h1>
 
             <h2>Grid</h2>
@@ -37,22 +34,30 @@
             <div class="gls-grid-small gls-child-width-auto" gls-grid gls-countdown>
                 <div>
                     <div class="gls-countdown-number gls-countdown-days"></div>
-                    <div class="gls-countdown-label gls-margin-small gls-text-center gls-visible@s">Days</div>
+                    <div class="gls-countdown-label gls-margin-small gls-text-center gls-visible@s">
+                        Days
+                    </div>
                 </div>
                 <div class="gls-countdown-separator">:</div>
                 <div>
                     <div class="gls-countdown-number gls-countdown-hours"></div>
-                    <div class="gls-countdown-label gls-margin-small gls-text-center gls-visible@s">Hours</div>
+                    <div class="gls-countdown-label gls-margin-small gls-text-center gls-visible@s">
+                        Hours
+                    </div>
                 </div>
                 <div class="gls-countdown-separator">:</div>
                 <div>
                     <div class="gls-countdown-number gls-countdown-minutes"></div>
-                    <div class="gls-countdown-label gls-margin-small gls-text-center gls-visible@s">Minutes</div>
+                    <div class="gls-countdown-label gls-margin-small gls-text-center gls-visible@s">
+                        Minutes
+                    </div>
                 </div>
                 <div class="gls-countdown-separator">:</div>
                 <div>
                     <div class="gls-countdown-number gls-countdown-seconds"></div>
-                    <div class="gls-countdown-label gls-margin-small gls-text-center gls-visible@s">Seconds</div>
+                    <div class="gls-countdown-label gls-margin-small gls-text-center gls-visible@s">
+                        Seconds
+                    </div>
                 </div>
             </div>
 
@@ -100,16 +105,21 @@
                             <td><code>date</code></td>
                             <td>String</td>
                             <td>false</td>
-                            <td>Any string parsable by <code>Date.parse</code> - <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Date/parse" target="_blank">Reference</a>.</td>
+                            <td>
+                                Any string parsable by <code>Date.parse</code> -
+                                <a
+                                    href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Date/parse"
+                                    target="_blank"
+                                    >Reference</a
+                                >.
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-
         </div>
 
         <script>
-
             let date = new Date(Date.now());
             date.setDate(date.getDate() + 7);
             date = date.toISOString();
@@ -117,7 +127,6 @@
             for (const el of Gloss.util.$$('[gls-countdown]')) {
                 el.setAttribute('date', date);
             }
-
         </script>
     </body>
 </html>
