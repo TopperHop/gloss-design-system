@@ -8,8 +8,9 @@
     "scripts": {
         "build:tokens": "node scripts/build-tokens.mjs",
         "build:css": "sass --load-path=node_modules --quiet-deps src/styles/gloss.scss dist/css/gloss.css",
+        "build:js": "node scripts/build-js.mjs",
         "build:docs-assets": "node scripts/build-docs-assets.mjs",
-        "build:docs": "npm run sync:uikit-docs && npm run build:css && npm run build:docs-assets",
+        "build:docs": "npm run sync:uikit-docs && npm run build:css && npm run build:js && npm run build:docs-assets",
         "prebuild:css": "npm run check:tokens",
         "check:tokens": "node scripts/build-tokens.mjs --check",
         "sync:uikit-docs": "node scripts/sync-uikit-docs.mjs",
