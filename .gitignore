@@ -31,8 +31,13 @@ test-results/
 .env.*
 !.env.example
 
-# Licensed assets supplied outside the open-source repository
+# Licensed & proprietary assets (kept local / outside public repo)
 assets-private/
+src/fonts/
+dist/fonts/
+src/images/icons/
+dist/images/icons/
+dist/js/gloss-icons.min.js
 
 # Logs
 *.log

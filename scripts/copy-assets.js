@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 
 console.log('Copying assets...');
 
@@ -7,21 +8,37 @@ try {
     fs.mkdirSync('dist/fonts', { recursive: true });
     fs.mkdirSync('dist/images', { recursive: true });
 
-    // Copy fonts recursively
-    if (fs.existsSync('src/fonts')) {
-        fs.cpSync('src/fonts', 'dist/fonts', { recursive: true });
-        console.log('Fonts copied successfully.');
-    } else {
-        console.log('src/fonts directory not found.');
+    // Copy public image directories (backgrounds, components)
+    for (const dir of ['backgrounds', 'components']) {
+        const srcDir = path.join('src/images', dir);
+        const distDir = path.join('dist/images', dir);
+        if (fs.existsSync(srcDir)) {
+            fs.cpSync(srcDir, distDir, { recursive: true });
+        }
     }
 
-    // Copy images recursively
-    if (fs.existsSync('src/images')) {
-        fs.cpSync('src/images', 'dist/images', { recursive: true });
-        console.log('Images copied successfully.');
-    } else {
-        console.log('src/images directory not found.');
+    // Copy icons from local src or assets-private if available
+    const iconSources = ['src/images/icons', 'assets-private/icons', 'assets-private/images/icons'];
+    for (const iconSrc of iconSources) {
+        if (fs.existsSync(iconSrc)) {
+            fs.mkdirSync('dist/images/icons', { recursive: true });
+            fs.cpSync(iconSrc, 'dist/images/icons', { recursive: true });
+            console.log(`Copied icons from ${iconSrc}.`);
+            break;
+        }
     }
+
+    // Copy fonts from local src or assets-private if available
+    const fontSources = ['src/fonts', 'assets-private/fonts'];
+    for (const fontSrc of fontSources) {
+        if (fs.existsSync(fontSrc)) {
+            fs.cpSync(fontSrc, 'dist/fonts', { recursive: true });
+            console.log(`Copied fonts from ${fontSrc}.`);
+            break;
+        }
+    }
+
+    console.log('Asset copying complete.');
 } catch (err) {
     console.error('Error copying assets:', err);
     process.exit(1);
